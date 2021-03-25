@@ -12,7 +12,6 @@ class ArticlesController extends Controller
     }
 
     public function details(){
-       
     return view('article.details');
     }
 
