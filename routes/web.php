@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','App\Http\Controllers\HomeController@homepage')->name('home');
 //Articles
 Route::get('/articles', 'App\Http\Controllers\ArticlesController@index')->name('articles');
-Route::get('/articles/show', 'App\Http\Controllers\ArticlesController@details')->name('details_article');
+Route::get('/article/{slug}', 'App\Http\Controllers\ArticlesController@details')->name('details_article');
 Route::get('/articles/categorie/{slug}', 'App\Http\Controllers\ArticlesController@liste_par_categorie')->name('article_par_categorie');
 //Fin Articles
 

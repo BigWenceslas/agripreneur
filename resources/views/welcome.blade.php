@@ -149,290 +149,7 @@
 							</div>
 						
 						</div>
-						<div class="col-xl-4">
-							<div class="widget_tab md-mt-30">
-								<ul class="nav nav-tabs">
-									<li><a class="active" data-toggle="tab" href="#post1">ARTICLES POPULAIRE</a>
-									</li>
-									
-								</ul>
-								<div class="tab-content">
-									<div id="post1" class="tab-pane fade show in active">
-										<div class="widget tab_widgets mb30">
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/agri/agrip11.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">CULTURE</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Réussir l’élevage des poulets de chair: la ration alimentaire</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/agri/agrip11.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">CULTURE</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Réussir l’élevage des poulets de chair: la ration alimentaire</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/agri/agrip11.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">CULTURE</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Réussir l’élevage des poulets de chair: la ration alimentaire</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/agri/agrip11.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">CULTURE</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Réussir l’élevage des poulets de chair: la ration alimentaire</a></h4>
-												</div>
-											</div>
-											<div class="space-15 ldnane"></div>
-											<div class="border_black ldnane"></div>
-											<div class="space-15 ldnane"></div>
-											<div class="single_post widgets_small ldnane">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/agri/agrip11.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">CULTURE</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Réussir l’élevage des poulets de chair: la ration alimentaire</a></h4>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div id="post2" class="tab-pane fade">
-										<div class="widget tab_widgets mb30">
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab1.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">CULTURE</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Réussir l’élevage des poulets de chair: la ration alimentaire</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab2.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">CULTURE</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Réussir l’élevage des poulets de chair: la ration alimentaire</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											<div class="space-15"></div>
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab3.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">U.S. Response subash says he will label regions by risk of…</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											<div class="space-15"></div>
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab4.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Venezuela elan govt and opposit the property collect</a></h4>
-												</div>
-											</div>
-											<div class="space-15 ldnane"></div>
-											<div class="border_black ldnane"></div>
-											<div class="space-15 ldnane"></div>
-											<div class="single_post widgets_small ldnane">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab5.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Cheap smartphone sensor could help you old food safe</a></h4>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div id="post3" class="tab-pane fade">
-										<div class="widget tab_widgets mb30">
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab1.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Copa America: Luis Suarez from devastated US</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											<div class="space-15"></div>
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab2.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Nancy Zhang a Chinese busy woman and Dhaka</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											<div class="space-15"></div>
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab3.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">U.S. Response subash says he will label regions by risk of…</a></h4>
-												</div>
-											</div>
-											<div class="space-15"></div>
-											<div class="border_black"></div>
-											<div class="space-15"></div>
-											<div class="single_post widgets_small">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab4.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Venezuela elan govt and opposit the property collect</a></h4>
-												</div>
-											</div>
-											<div class="space-15 ldnane"></div>
-											<div class="border_black ldnane"></div>
-											<div class="space-15 ldnane"></div>
-											<div class="single_post widgets_small ldnane">
-												<div class="post_img">
-													<div class="img_wrap">
-														<a href="#">
-															<img src="assets/img/header/widget/tab5.jpg" alt="">
-														</a>
-													</div>
-												</div>
-												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="#">TECHNOLOGY</a>
-														<a href="#">March 26, 2020</a>
-													</div>
-													<h4><a href="post1.html">Cheap smartphone sensor could help you old food safe</a></h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						@include('partials.articles_populaires')
 					</div>
 				</div>
 				
@@ -623,13 +340,13 @@
 				<div class="follow_box widget mb30 mt-md-60">
 					<h2 class="widget-title">Nous suivre sur les reseaux</h2>
 					<div class="social_shares">
-						<a class="single_social social_facebook" href="#">	<span class="follow_icon"><i class="fab fa-facebook-f"></i></span>
+						<a class="single_social social_facebook" target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><span class="follow_icon"><i class="fab fa-facebook-f"></i></span>
 					<span class="icon_text">Facebook</span>
 						</a>
-						<a class="single_social social_twitter" href="#">	<span class="follow_icon"><i class="fab fa-twitter"></i></span>
+						<a class="single_social social_twitter" target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->twitter}}@endif"><span class="follow_icon"><i class="fab fa-twitter"></i></span>
 							<span class="icon_text">Twitter</span>
 						</a>
-						<a class="single_social social_youtube" href="#">	<span class="follow_icon"><i class="fab fa-youtube"></i></span>
+						<a class="single_social social_youtube" target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><span class="follow_icon"><i class="fab fa-youtube"></i></span>
 							<span class="icon_text">Youtube</span>
 						</a>
 						
@@ -640,244 +357,35 @@
 					<h2 class="widget-title">ARTICLES RÉCENTS</h2>
 					<div class="post_type2_carousel owl-carousel nav_style1">
 						<!--CAROUSEL START-->
+						@for ($i = 0; $i < $page_articles_recents; $i++)
 						<div class="single_post2_carousel">
+							@for ($l = 0; $l < 6; $l++)
+							@if (isset($articles_recents[6*$i+$l]))
 							<div class="single_post widgets_small type8">
 								<div class="post_img">
 									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm1.jpg" alt="">
+										<img src="{{'storage/' . $articles_recents[6*$i+$l]->image}}" alt="{{$articles_recents[6*$i+$l]->nom}}">
 									</div>	<span class="tranding">
 										<i class="fas fa-bolt"></i>
 									</span>
 								</div>
 								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
+									<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $articles_recents[6*$i+$l]->slug])}}">{{$articles_recents[6*$i+$l]->category->nom}}</a>
+										<a href="{{route('details_article',['slug'=> $articles_recents[6*$i+$l]->slug])}}">{{$articles_recents[6*$i+$l]->created_at->format('d M Y - H:i:s')}}</a>
 									</div>
-									<h4><a href="post1.html">Nancy zhang a chinese busy woman and dhaka</a></h4>
+									<h4><a href="{{route('details_article',['slug'=> $articles_recents[6*$i+$l]->slug])}}">{{$articles_recents[6*$i+$l]->nom}}</a></h4>
 								</div>
 								<div class="type8_count">
-									<h2>1</h2>
+									<h2>{{6*$i+$l+1}}</h2>
 								</div>
 							</div>
 							<div class="space-15"></div>
 							<div class="border_black"></div>
 							<div class="space-15"></div>
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm2.jpg" alt="">
-									</div>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">The billionaire Philan thropist read to learn</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>2</h2>
-								</div>
-							</div>
-							<div class="space-15"></div>
-							<div class="border_black"></div>
-							<div class="space-15"></div>
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm3.jpg" alt="">
-									</div>	<span class="tranding">
-										<i class="fas fa-bolt"></i>
-									</span>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">Cheap smartphone sensor could help you</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>3</h2>
-								</div>
-							</div>
-							<div class="space-15"></div>
-							<div class="border_black"></div>
-							<div class="space-15"></div>
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm4.jpg" alt="">
-									</div>	<span class="tranding">
-										<i class="fas fa-bolt"></i>
-									</span>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">Class property employ ancho red multi</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>4</h2>
-								</div>
-							</div>
-							<div class="space-15"></div>
-							<div class="border_black"></div>
-							<div class="space-15"></div>
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm5.jpg" alt="">
-									</div>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">Best garden wing supplies for the horticu</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>5</h2>
-								</div>
-							</div>
-							<div class="space-15 ldnane"></div>
-							<div class="border_black ldnane"></div>
-							<div class="space-15 ldnane"></div>
-							<div class="single_post widgets_small type8 ldnane">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/blog/blog_small3.jpg" alt="">
-									</div>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">Ratiffe to be Director of nation talent Trump</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>6</h2>
-								</div>
-							</div>
+							@endif
+							@endfor
 						</div>
-						<div class="single_post2_carousel">
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm1.jpg" alt="">
-									</div>	<span class="tranding">
-										<i class="fas fa-bolt"></i>
-									</span>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">Nancy zhang a chinese busy woman and dhaka</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>1</h2>
-								</div>
-							</div>
-							<div class="space-15"></div>
-							<div class="border_black"></div>
-							<div class="space-15"></div>
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm2.jpg" alt="">
-									</div>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">The billionaire Philan thropist read to learn</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>2</h2>
-								</div>
-							</div>
-							<div class="space-15"></div>
-							<div class="border_black"></div>
-							<div class="space-15"></div>
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm3.jpg" alt="">
-									</div>	<span class="tranding">
-										<i class="fas fa-bolt"></i>
-									</span>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">Cheap smartphone sensor could help you</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>3</h2>
-								</div>
-							</div>
-							<div class="space-15"></div>
-							<div class="border_black"></div>
-							<div class="space-15"></div>
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm4.jpg" alt="">
-									</div>	<span class="tranding">
-										<i class="fas fa-bolt"></i>
-									</span>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">Class property employ ancho red multi</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>4</h2>
-								</div>
-							</div>
-							<div class="space-15"></div>
-							<div class="border_black"></div>
-							<div class="space-15"></div>
-							<div class="single_post widgets_small type8">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/most_view/mostsm5.jpg" alt="">
-									</div>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-									<h4><a href="post1.html">Best garden wing supplies for the horticu</a></h4>
-								</div>
-								<div class="type8_count">
-									<h2>5</h2>
-								</div>
-							</div>
-							<div class="space-15 ldnane"></div>
-							<div class="border_black ldnane"></div>
-							<div class="space-15 ldnane"></div>
-							<div class="single_post widgets_small type8 ldnane">
-								<div class="post_img">
-									<div class="img_wrap">
-										<img src="assets/img/blog/blog_small3.jpg" alt="">
-									</div>
-								</div>
-								<div class="single_post_text">
-									<div class="meta2">	<a href="#">TECHNOLOGY</a>
-										<a href="#">March 26, 2020</a>
-									</div>
-								
-								</div>
-								<div class="type8_count">
-									<h2>6</h2>
-								</div>
-							</div>
-						</div>
+						@endfor
 					</div>
 					<!--CAROUSEL END-->
 				</div>
@@ -887,186 +395,94 @@
 
 	</div>
 
-<div class="container">
-	<div class="row">
+	@if ($cat_bas_page)	
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="col-12">
+						<div class="heading">
+							<h2 class="widget-title">{{$cat_bas_page->bas_bloc1->nom}}</h2>
+						</div>
+					</div>
+					@foreach ($bas_bloc1 as $item)
+					<div class="single_post widgets_small">
+						<div class="post_img">
+							<div class="img_wrap">
+								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}">
+							</div>	<span class="tranding">
+								<i class="fas fa-bolt"></i>
+							</span>
+						</div>
+						<div class="single_post_text">
+							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
+								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+							</div>
+							<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>
+						</div>
+					</div>
+					<div class="space-15"></div>
+					<div class="border_black"></div>
+					<div class="space-15"></div>
+					@endforeach
+				</div>
 
-		<div class="col-lg-4">
-			<div class="col-12">
-				<div class="heading">
-					<h2 class="widget-title">CULTURE</h2>
-				</div>
-			</div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm4.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
+				<div class="col-lg-4">
+					<div class="col-12">
+						<div class="heading">
+							<h2 class="widget-title">{{$cat_bas_page->bas_bloc2->nom}}</h2>
+						</div>
 					</div>
-					<h4><a href="post1.html">Nancy Zhang a Chinese busy woman and Dhaka</a></h4>
-				</div>
-			</div>
-			<div class="space-15"></div>
-			<div class="border_black"></div>
-			<div class="space-15"></div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm5.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
+					@foreach ($bas_bloc2 as $item)
+					<div class="single_post widgets_small">
+						<div class="post_img">
+							<div class="img_wrap">
+								<img src="assets/img/trending/transm1.jpg" alt="">
+							</div>	<span class="tranding">
+								<i class="fas fa-bolt"></i>
+							</span>
+						</div>
+						<div class="single_post_text">
+							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
+								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+							</div>
+							<h4><a href="post1.html">{{$item->nom}}</a></h4>
+						</div>
 					</div>
-					<h4><a href="post1.html">U.S. Response subash says he will label regions by risk of…</a></h4>
+					<div class="space-15"></div>
+					<div class="border_black"></div>
+					<div class="space-15"></div>
+					@endforeach
 				</div>
-			</div>
-			<div class="space-15"></div>
-			<div class="border_black"></div>
-			<div class="space-15"></div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm6.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
+				<div class="col-lg-4">
+					<div class="col-12">
+						<div class="heading">
+							<h2 class="widget-title">{{$cat_bas_page->bas_bloc3->nom}}</h2>
+						</div>
 					</div>
-					<h4><a href="post1.html">Venezuela elan govt and opposit the property collect</a></h4>
+					@foreach ($bas_bloc3 as $item)
+					<div class="single_post widgets_small">
+						<div class="post_img">
+							<div class="img_wrap">
+								<img src="assets/img/trending/transm1.jpg" alt="">
+							</div>	<span class="tranding">
+								<i class="fas fa-bolt"></i>
+							</span>
+						</div>
+						<div class="single_post_text">
+							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
+								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+							</div>
+							<h4><a href="post1.html">{{$item->nom}}</a></h4>
+						</div>
+					</div>
+					<div class="space-15"></div>
+					<div class="border_black"></div>
+					<div class="space-15"></div>
+					@endforeach
 				</div>
 			</div>
 		</div>
-
-		<div class="col-lg-4">
-			<div class="col-12">
-				<div class="heading">
-					<h2 class="widget-title">ENQUETE</h2>
-				</div>
-			</div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm4.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
-					</div>
-					<h4><a href="post1.html">Nancy Zhang a Chinese busy woman and Dhaka</a></h4>
-				</div>
-			</div>
-			<div class="space-15"></div>
-			<div class="border_black"></div>
-			<div class="space-15"></div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm5.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
-					</div>
-					<h4><a href="post1.html">U.S. Response subash says he will label regions by risk of…</a></h4>
-				</div>
-			</div>
-			<div class="space-15"></div>
-			<div class="border_black"></div>
-			<div class="space-15"></div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm6.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
-					</div>
-					<h4><a href="post1.html">Venezuela elan govt and opposit the property collect</a></h4>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-4">
-			<div class="col-12">
-				<div class="heading">
-					<h2 class="widget-title">ELEVAGE</h2>
-				</div>
-			</div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm1.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
-					</div>
-					<h4><a href="post1.html">Nancy Zhang a Chinese busy woman and Dhaka</a></h4>
-				</div>
-			</div>
-			<div class="space-15"></div>
-			<div class="border_black"></div>
-			<div class="space-15"></div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm2.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
-					</div>
-					<h4><a href="post1.html">U.S. Response subash says he will label regions by risk of…</a></h4>
-				</div>
-			</div>
-			<div class="space-15"></div>
-			<div class="border_black"></div>
-			<div class="space-15"></div>
-			<div class="single_post widgets_small">
-				<div class="post_img">
-					<div class="img_wrap">
-						<img src="assets/img/trending/transm6.jpg" alt="">
-					</div>	<span class="tranding">
-						<i class="fas fa-bolt"></i>
-					</span>
-				</div>
-				<div class="single_post_text">
-					<div class="meta2">	<a href="#">TECHNOLOGY</a>
-						<a href="#">March 26, 2020</a>
-					</div>
-					<h4><a href="post1.html">Venezuela elan govt and opposit the property collect</a></h4>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+	@endif
 	<!--::::: ENTERTAINMENT AREA END :::::::-->
 @endsection
 

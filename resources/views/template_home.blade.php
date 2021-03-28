@@ -135,29 +135,11 @@
 					<div class="col-12 col-lg-12">
 						<div class="newsprk_nav stellarnav">
 							<ul id="newsprk_menu">
-								<li><a href="#">Acceuil </i></a>
-									
-								</li>
-								<li><a href="#">Culture</i></a>
-									
-								</li>
-								<li><a href="#">Peche</i></a>
-									
-								</li>
-								<li><a href="#">Elevage</i></a>
-
-
-								</li>
-								<li><a href="#world">Environnement</a></li>
-								<li><a href="#sports">Enquette</a></li>
-								<li><a href="contact.html">Agritech</a></li>
-
-								<li><a href="#world">Tv</a></li>
-								<li><a href="#sports">Transformation</a></li>
+								<li><a href="">Acceuil </i></a></li>
+								@foreach ($cat_header as $cat)
+									<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
+								@endforeach
 								<li><a href="contact.html">Boutique</a></li>
-
-								<li><a href="#sports">Agri check</a></li>
-								
 							</ul>
 							
 						</div>
