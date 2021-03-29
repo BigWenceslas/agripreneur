@@ -6,17 +6,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--::::: FABICON ICON :::::::-->
-	<link rel="icon" href="assets/img/icon/fabicon.png">
+	<link rel="icon" href="{{asset('assets/img/icon/fabicon.png')}}">
 	<!--::::: ALL CSS FILES :::::::-->
-	<link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/plugins/animate.min.css">
-	<link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
-	<link rel="stylesheet" href="assets/css/plugins/modal-video.min.css">
-	<link rel="stylesheet" href="assets/css/plugins/owl.carousel.css">
-	<link rel="stylesheet" href="assets/css/plugins/slick.css">
-	<link rel="stylesheet" href="assets/css/plugins/stellarnav.css">
-	<link rel="stylesheet" href="assets/css/theme.css">
+	<link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/plugins/fontawesome.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/plugins/modal-video.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/plugins/owl.carousel.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/plugins/slick.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/plugins/stellarnav.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/theme.css')}}">
     @yield('head_file')
+	@yield('title_page')
 </head>
 <body class="theme-1">
         <!--::::: PRELOADER START :::::::-->
@@ -84,11 +85,11 @@
 					
 						<div class="social1">
 							<ul class="inline">
-								<li><a href="#"><i class="fab fa-twitter"></i></a>
+								<li><a href="{{$reseaux_sociaux->twitter}}"><i class="fab fa-twitter"></i></a>
 								</li>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a>
+								<li><a href="{{$reseaux_sociaux->facebook}}"><i class="fab fa-facebook-f"></i></a>
 								</li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a>
+								<li><a href="{{$reseaux_sociaux->youtube}}"><i class="fab fa-youtube"></i></a>
 								</li>
 								
 							</ul>
@@ -109,14 +110,14 @@
 				<div class="col-lg-4 align-self-center">
 					<div class="logo">
 						<a href="index.html">
-							<img src="assets/img/logo/logo.png" alt="image">
+							<img src="{{asset('assets/img/logo/logo.png')}}" alt="image">
 						</a>
 					</div>
 				</div>
 				<div class="col-lg-8 align-self-center">
 					<div class="banner1">
 						<a href="#">
-							<img src="assets/img/banderole3.jpg" alt="">
+							<img src="{{asset('assets/img/banderole3.jpg')}}" alt="">
 						</a>
 					</div>
 				</div>
@@ -124,8 +125,6 @@
 		</div>
 	</div>
 	<!--::::: LOGO AREA END :::::::-->
-
-
 	<!--::::: MENU AREA START  :::::::-->
 	<div class="main-menu" id="header">	<a href="#top" class="up_btn up_btn1"><i class="far fa-chevron-double-up"></i></a>
 		<div class="main-nav clearfix is-ts-sticky">
@@ -336,18 +335,18 @@
 	<!--::::: FOOTER AREA END :::::::-->
        
     <!--::::: ALL JS FILES :::::::-->
-	<script src="assets/js/plugins/jquery.2.1.0.min.js"></script>
-	<script src="assets/js/plugins/bootstrap.min.js"></script>
-	<script src="assets/js/plugins/jquery.nav.js"></script>
-	<script src="assets/js/plugins/jquery.waypoints.min.js"></script>
-	<script src="assets/js/plugins/jquery-modal-video.min.js"></script>
-	<script src="assets/js/plugins/owl.carousel.js"></script>
-	<script src="assets/js/plugins/popper.min.js"></script>
-	<script src="assets/js/plugins/circle-progress.js"></script>
-	<script src="assets/js/plugins/slick.min.js"></script>
-	<script src="assets/js/plugins/stellarnav.js"></script>
-	<script src="assets/js/plugins/wow.min.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="{{asset('assets/js/plugins/jquery.2.1.0.min.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/bootstrap.min.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/jquery.nav.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/jquery.waypoints.min.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/jquery-modal-video.min.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/owl.carousel.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/popper.min.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/circle-progress.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/slick.min.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/stellarnav.js')}}"></script>
+	<script src="{{asset('assets/js/plugins/wow.min.js')}}"></script>
+	<script src="{{asset('assets/js/main.js')}}"></script>
     @yield('js_files')
 </body>
 </html>

@@ -17,7 +17,7 @@
 													</div>
 												</div>
 												<div class="single_post_text">
-													<div class="meta2 meta_separator1">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$item->category->nom}}</a>
+													<div class="meta2 meta_separator1">	<a href="{{route('article_par_categorie',['slug'=> $item->category->slug])}}">{{$item->category->nom}}</a>
 														<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
 													</div>
 													<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>

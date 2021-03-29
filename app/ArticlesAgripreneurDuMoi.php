@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 
-class HomeALaUne extends Model
+class ArticlesAgripreneurDuMoi extends Model
 {
     
 }

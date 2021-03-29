@@ -1,6 +1,6 @@
 @extends('template_home')
 
-@section('title', "AGRIPRENEUR D'AFRIQUE")
+@section('title_page')<title>AGRIPRENEUR D'AFRIQUE</title>@endsection
 
 @section('content_body')
 	<!--::::: POST GALLARY AREA START :::::::-->
@@ -11,143 +11,24 @@
 					<div class="row">
 						<div class="col-xl-8">
 							<div class="slider_demo2">
+								@if ($a_la_une)
 								<div class="single_post post_type6 xs-mb30">
 									<div class="post_img gradient1">
-										<img src="assets/img/plan.jpg" alt="">	<span class="tranding">
+										<img src="{{'storage/'. $a_la_une->article_a_la_une->image}}" alt="{{$a_la_une->article_a_la_une->nom}}"><span class="tranding">
 											<i class="fas fa-play"></i>
 										</span>
 									</div>
 									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
+										<div class="meta meta_separator1"><a href="{{route('article_par_categorie',['slug'=> $a_la_une->article_a_la_une->slug])}}">{{$a_la_une->article_a_la_une->category->nom}}</a>
+											<a href="#">{{$a_la_une->article_a_la_une->created_at->format('d M Y - H:i:s')}}</a>
 										</div>
-										<h4><a class="play_btn" href="video_post1.html">Japan’s virus success has puzzled the world. Is its luck running out?</a></h4>
+										<h4><a class="play_btn" href="video_post1.html">{{$a_la_une->article_a_la_une->nom}}</a></h4>
 										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
+										<p class="post-p">{!!$a_la_une->article_a_la_une->resume!!}</p>
 									</div>
 								</div>
-								<div class="single_post post_type6 xs-mb30">
-									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top2.jpg" alt="">	<span class="tranding">
-											<i class="fas fa-play"></i>
-										</span>
-									</div>
-									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
-										</div>
-										<h4><a class="play_btn" href="video_post1.html">Copa America: Luis Suarez from devastated US America</a></h4>
-										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-									</div>
-								</div>
-								<div class="single_post post_type6 xs-mb30">
-									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top.jpg" alt="">	<span class="tranding">
-											<i class="fas fa-play"></i>
-										</span>
-									</div>
-									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
-										</div>
-										<h4><a class="play_btn" href="video_post1.html">Copa America: Luis Suarez from devastated US America</a></h4>
-										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-									</div>
-								</div>
-								<div class="single_post post_type6 xs-mb30">
-									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top2.jpg" alt="">	<span class="tranding">
-											<i class="fas fa-play"></i>
-										</span>
-									</div>
-									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
-										</div>
-										<h4><a class="play_btn" href="video_post1.html">Japan’s virus success has puzzled the world. Is its luck running out?</a></h4>
-										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-									</div>
-								</div>
-								<div class="single_post post_type6 xs-mb30">
-									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top.jpg" alt="">	<span class="tranding">
-											<i class="fas fa-play"></i>
-										</span>
-									</div>
-									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
-										</div>
-										<h4><a class="play_btn" href="video_post1.html">Copa America: Luis Suarez from devastated US America</a></h4>
-										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-									</div>
-								</div>
-								<div class="single_post post_type6 xs-mb30">
-									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top2.jpg" alt="">	<span class="tranding">
-											<i class="fas fa-play"></i>
-										</span>
-									</div>
-									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
-										</div>
-										<h4><a class="play_btn" href="video_post1.html">Japan’s virus success has puzzled the world. Is its luck running out?</a></h4>
-										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-									</div>
-								</div>
-								<div class="single_post post_type6 xs-mb30">
-									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top.jpg" alt="">	<span class="tranding">
-											<i class="fas fa-play"></i>
-										</span>
-									</div>
-									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
-										</div>
-										<h4><a class="play_btn" href="video_post1.html">Copa America: Luis Suarez from devastated US America</a></h4>
-										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-									</div>
-								</div>
-								<div class="single_post post_type6 xs-mb30">
-									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top2.jpg" alt="">	<span class="tranding">
-											<i class="fas fa-play"></i>
-										</span>
-									</div>
-									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
-										</div>
-										<h4><a class="play_btn" href="video_post1.html">Japan’s virus success has puzzled the world. Is its luck running out?</a></h4>
-										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-									</div>
-								</div>
-								<div class="single_post post_type6 xs-mb30">
-									<div class="post_img gradient1">
-										<img src="assets/img/header/sider-top2.jpg" alt="">	<span class="tranding">
-											<i class="fas fa-play"></i>
-										</span>
-									</div>
-									<div class="single_post_text">
-										<div class="meta meta_separator1">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
-										</div>
-										<h4><a class="play_btn" href="video_post1.html">Copa America: Luis Suarez from devastated US America</a></h4>
-										<div class="space-10"></div>
-										<p class="post-p">The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with sandy shower…</p>
-									</div>
-								</div>
+								@endif
 							</div>
-						
 						</div>
 						@include('partials.articles_populaires')
 					</div>
@@ -159,12 +40,13 @@
 	<!--::::: POST GALLARY AREA END :::::::-->
 
 	<!--::::: FEATURE_POST AREA START :::::::-->
+	@if ($articles_mois)
 	<div class="feature_carousel_area mb40">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="heading">
-						<h2 class="widget-title">AGRIPRENEUR DU MOIS</h2>
+						<h2 class="widget-title">{{$articles_mois->titre_bloc}}</h2>
 					</div>
 				</div>
 			</div>
@@ -172,94 +54,54 @@
 				<div class="col-12">
 					<div class="feature_carousel owl-carousel nav_style1">
 						<!--CAROUSEL START-->
+						@foreach ($articles_mois->articles as $item)
 						<div class="single_post post_type6 post_type7">
 							<div class="post_img gradient1">
-								<a href="#">
-									<img src="assets/img/agrimois1/agri1.jpg" alt="">
+								<a href="{{route('details_article',['slug'=> $item->slug])}}">
+									<img src="{{'storage/'. $item->image}}" alt="{{$item->nom}}">
 								</a>
 							</div>
 							<div class="single_post_text">
-								<div class="meta5">	<a href="#">TECHNOLOGY</a>
-									<a href="#">March 26, 2020</a>
+								<div class="meta5">	<a href="{{route('article_par_categorie',['slug'=> $item->category->slug])}}">{{$item->category->nom}}</a>
+									<a href="#">{{$item->created_at->format('d M Y - H:i:s')}}</a>
 								</div>
 								<h4>
-									<a href="post1.html">Best garden wing supplies for the horticu ltural</a>
+									<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a>
 								</h4>
 							</div>
 						</div>
-						<div class="single_post post_type6 post_type7">
-							<div class="post_img gradient1">
-								<img src="assets/img/agrimois1/agri2.jpg" alt="">
-							</div>
-							<div class="single_post_text">
-								<div class="meta5">	<a href="#">TECHNOLOGY</a>
-									<a href="#">March 26, 2020</a>
-								</div>
-								<h4><a href="post1.html">Copa America: Luis Suarez from devastated US</a></h4>
-							</div>
-						</div>
-						<div class="single_post post_type6 post_type7">
-							<div class="post_img gradient1">
-								<img src="assets/img/agrimois1/agri3.jpg" alt="">
-							</div>
-							<div class="single_post_text">
-								<div class="meta5">	<a href="#">TECHNOLOGY</a>
-									<a href="#">March 26, 2020</a>
-								</div>
-								<h4><a href="post1.html">Best garden wing supplies for the horticu ltural</a></h4>
-							</div>
-						</div>
-						<div class="single_post post_type6 post_type7">
-							<div class="post_img gradient1">
-								<img src="assets/img/agrimois1/agri4.jpg" alt="">
-							</div>
-							<div class="single_post_text">
-								<div class="meta5">	<a href="#">TECHNOLOGY</a>
-									<a href="#">March 26, 2020</a>
-								</div>
-								<h4><a href="post1.html">Copa America: Luis Suarez from devastated US</a></h4>
-							</div>
-						</div>
-						<div class="single_post post_type6 post_type7">
-							<div class="post_img gradient1">
-								<img src="assets/img/agrimois1/agri5.jpg" alt="">
-							</div>
-							<div class="single_post_text">
-								<div class="meta5">	<a href="#">TECHNOLOGY</a>
-									<a href="#">March 26, 2020</a>
-								</div>
-								<h4><a href="post1.html">Best garden wing supplies for the horticu ltural</a></h4>
-							</div>
-						</div>
+						@endforeach
 					</div>
 					<!--CAROUSEL END-->
 				</div>
 			</div>
 		</div>
 	</div>
+	@endif
 	<!--::::: FEATURE POST AREA END :::::::-->
 	<!--::::: TRANDING CAROUSEL AREA START :::::::-->
 	<div class="container">
 		<div class="row">
+			@if ($a_la_une)
 			<div class="col-lg-6 col-lg-8">
-				<h2 class="widget-title">AGRIPRENEUR TV</h2>
+				<h2 class="widget-title">{{$a_la_une->titre_bloc1}}</h2>
 				<div class="carousel_post2_type3 nav_style1 owl-carousel">
 					<!--CAROUSEL START-->
 					<div class="single_post post_type3">
 						<div class="post_img">
 							<div class="img_wrap">
 								<div class="video-responsive">
-								<iframe width="560" height="400" src="https://www.youtube.com/embed/rsF5xlaen7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$article1_bloc1->video_youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
 							</div>	<span class="tranding">
 								<i class="fas fa-bolt"></i>
 							</span>
 						</div>
 						<div class="single_post_text">
-							<div class="meta3">	<a href="#">AGRIPRENEUR TV</a>
-								<a href="#">March 26, 2020</a>
+							<div class="meta3">	<a href="{{route('article_par_categorie',['slug'=> $article1_bloc1->category->slug])}}">{{$article1_bloc1->category->nom}}</a>
+								<a href="#">{{$article1_bloc1->created_at->format('d M Y - H:i:s')}}</a>
 							</div>
-							<h4><a href="post1.html">(Agri-conseil) Réussir sa culture de pastèques: les conseils d'un millionnaire du secteur</a></h4>
+							<h4><a href="{{route('details_article',['slug'=> $article1_bloc1->slug])}}">{!!$article1_bloc1->resume!!}</a></h4>
 							
 						</div>
 					</div>
@@ -267,18 +109,19 @@
 						<div class="post_img">
 							<div class="img_wrap">
 								<div class="video-responsive">
-								<iframe width="560" height="400" src="https://www.youtube.com/embed/KoJ8AyYOJaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div></div>
+								<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$article2_bloc1->video_youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+							</div>	<span class="tranding">
+								<i class="fas fa-bolt"></i>
+							</span>
 						</div>
 						<div class="single_post_text">
-							<div class="meta3">	<a href="#">TECHNOLOGY</a>
-								<a href="#">March 26, 2020</a>
+							<div class="meta3">	<a href="{{route('article_par_categorie',['slug'=> $article2_bloc1->category->slug])}}">{{$article2_bloc1->category->nom}}</a>
+								<a href="#">{{$article2_bloc1->created_at->format('d M Y - H:i:s')}}</a>
 							</div>
-							<h4><a href="post1.html">Fabriquer des pavés écolos à base de déchets plastiques</a></h4>
-							
+							<h4><a href="{{route('details_article',['slug'=> $article2_bloc1->slug])}}">{!!$article1_bloc2->resume!!}</a></h4>
 						</div>
 					</div>
-				
 				</div>
 				
 				<div class="entertrainment_carousel mb30">
@@ -287,28 +130,27 @@
 						<div class="row">
 							<div class="col-12">
 								<div class="heading">
-									<h2 class="widget-title">TRANSFORMATION</h2>
+									<h2 class="widget-title">{{$a_la_une->titre_bloc2}}</h2>
 								</div>
 							</div>
 						</div>
 						<div class="row justify-content-center">
-						
 							<div class="col-md-6">
 								<div class="single_post post_type3 mb30">
 									<div class="post_img">
 										<div class="img_wrap">
 											<a href="#">
-												<img src="assets/img/tr/transf1.jpg" alt="">
+												<img src="{{'storage/'. $article1_bloc2->image}}" alt="{{$article1_bloc2->nom}}">
 											</a>
 										</div>
 									</div>
 									<div class="single_post_text">
-										<div class="meta3">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
+										<div class="meta3">
+											<a href="{{route('article_par_categorie',['slug'=> $article1_bloc2->category->slug])}}">{{$article1_bloc2->nom}}</a>
+											<a href="#">{{$article1_bloc2->created_at->format('d M Y - H:i:s')}}</a>
 										</div>
-										<h4><a href="post1.html">La maison des artisans », la vitrine des agripreneurs camerounais</a></h4>
+										<h4><a href="{{route('details_article',['slug'=> $article1_bloc2->slug])}}">{{$article1_bloc2->nom}}</a></h4>
 										<div class="space-10"></div>
-									
 									</div>
 								</div>
 							</div>
@@ -317,41 +159,28 @@
 									<div class="post_img">
 										<div class="img_wrap">
 											<a href="#">
-												<img src="assets/img/tr/transf2.jpg" alt="">
+												<img src="{{'storage/'. $article2_bloc2->image}}" alt="{{$article2_bloc2->nom}}">
 											</a>
 										</div>
 									</div>
 									<div class="single_post_text">
-										<div class="meta3">	<a href="#">TECHNOLOGY</a>
-											<a href="#">March 26, 2020</a>
+										<div class="meta3">
+											<a href="{{route('article_par_categorie',['slug'=> $article2_bloc2->category->slug])}}">{{$article2_bloc2->nom}}</a>
+											<a href="#">{{$article2_bloc2->created_at->format('d M Y - H:i:s')}}</a>
 										</div>
-										<h4><a href="post1.html">Au Cameroun, du pain à base de farine de plantain se vend bien</a></h4>
+										<h4><a href="{{route('details_article',['slug'=> $article2_bloc2->slug])}}">{{$article2_bloc2->nom}}</a></h4>
 										<div class="space-10"></div>
-									
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
+			@endif
 			<div class="col-md-12 col-lg-4">
-				<div class="follow_box widget mb30 mt-md-60">
-					<h2 class="widget-title">Nous suivre sur les reseaux</h2>
-					<div class="social_shares">
-						<a class="single_social social_facebook" target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><span class="follow_icon"><i class="fab fa-facebook-f"></i></span>
-					<span class="icon_text">Facebook</span>
-						</a>
-						<a class="single_social social_twitter" target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->twitter}}@endif"><span class="follow_icon"><i class="fab fa-twitter"></i></span>
-							<span class="icon_text">Twitter</span>
-						</a>
-						<a class="single_social social_youtube" target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><span class="follow_icon"><i class="fab fa-youtube"></i></span>
-							<span class="icon_text">Youtube</span>
-						</a>
-						
-					</div>
-				</div>
+				@include('partials.socials_right_bar')
 				<!--:::::: POST TYPE 2 START :::::::-->
 				<div class="widget tab_widgets mb30">
 					<h2 class="widget-title">ARTICLES RÉCENTS</h2>
