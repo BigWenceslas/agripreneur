@@ -14,16 +14,18 @@
 						<h3>{{$article->nom}}</h3>
 						<div class="space-10"></div>
 					</div>
-					<img src="{{asset('storage/'.$article->image)}}" alt="image">
+					<img src="{{asset('storage/'.$article->image)}}" alt="{{$article->nom}}">
 					<div class="space-20"></div>
 					<div class="row">
 						<div class="col-lg-6 align-self-center">
 							<div class="author">
 								<div class="author_img">
 									<div class="author_img_wrap">
-										<img src="{{asset('assets/img/author/author2.png')}}" alt="">
+										<img src="@if($article->auteur){{asset('storage/'.$article->auteur->avatar)}}@else {{asset('assets/img/author/author2.png')}}@endif" 
+										alt="{{$article->auteur->name}}">
 									</div>
-								</div>	<a href="#">{{$article->auteur}}</a>
+								</div>
+									<a href="#">@if($article->auteur){{$article->auteur->name}}@endif</a>
 								<ul>
 									<li><a href="#">{{$article->created_at->format('d-M-Y H:i:s')}}</a>
 									</li>

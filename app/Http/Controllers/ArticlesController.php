@@ -9,6 +9,7 @@ use App\CategoriesBasDePage;
 use App\SocialNetwork;
 use App\ALaUne;
 use App\AgripreneurDuMoi;
+use App\Models\User;
 
 class ArticlesController extends Controller
 {
@@ -30,8 +31,33 @@ class ArticlesController extends Controller
     'articles_populaires'=>$articles_populaires,'article' => $article]);
     }
 
-   public function liste_par_categorie(){
-
-    return view('article.liste_par_categorie');
+   public function liste_par_categorie($slug){
+    //Reseaux sociaux
+    $reseaux_sociaux = SocialNetwork::orderBy('id','desc')->first();
+    //Categorie header
+    $cat_header = Category::orderBy('nom','asc')->get();
+    //Articles populaire
+    $articles_populaires = Article::where([['publier','=',1]])->orderBy('vues','desc')->take(12)->get();
+    //Details Article
+    $categorie = Category::where('slug',$slug)->first();
+    //Liste des articles
+    $articles=Article::orderBy('vues','desc')->paginate(8);
+    return view('article.liste_par_categorie')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
+    'articles_populaires'=>$articles_populaires,'categorie'=>$categorie,'articles'=>$articles]);
    }
+
+   
+   public function recherche(Request $request){
+    //Reseaux sociaux
+    $categorie = Category::where('nom', 'like' ,'%' . $request->search. '%')->first();
+    $article = Article::where('nom', 'like','%' . $request->search. '%')->first();
+    if ($categorie) {
+        return redirect()->route('article_par_categorie', ['slug' => $categorie->slug]);
+    }
+    elseif ($article){
+        return redirect()->route('details_article', ['slug' => $article->slug]);
+     }else{
+        return redirect()->route('home');
+    }
+    }
 }

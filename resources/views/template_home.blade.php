@@ -34,8 +34,9 @@
 			<div class="row">
 				<div class="col-8 text-center m-auto">
 					<div class="v1search_form">
-						<form action="#">
-							<input type="search" placeholder="Search Here...">
+						<form action="{{route('recherche')}}" method="POST">
+							@csrf
+							<input type="search" name="search" placeholder="Faites une recherche ici...">
 							<button type="submit" class="cbtn1">Search</button>
 						</form>
 					</div>
@@ -109,7 +110,7 @@
 			<div class="row">
 				<div class="col-lg-4 align-self-center">
 					<div class="logo">
-						<a href="index.html">
+						<a href="{{route('home')}}">
 							<img src="{{asset('assets/img/logo/logo.png')}}" alt="image">
 						</a>
 					</div>

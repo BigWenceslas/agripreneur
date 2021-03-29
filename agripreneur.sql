@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 21 mars 2021 à 09:18
+-- Généré le : lun. 29 mars 2021 à 18:54
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -24,6 +24,53 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `agripreneur_du_mois`
+--
+
+DROP TABLE IF EXISTS `agripreneur_du_mois`;
+CREATE TABLE IF NOT EXISTS `agripreneur_du_mois` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `tire_bloc` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `agripreneur_du_mois`
+--
+
+INSERT INTO `agripreneur_du_mois` (`id`, `tire_bloc`, `created_at`, `updated_at`) VALUES
+(1, 'AGRIPRENEUR DU MOIS', '2021-03-29 07:47:51', '2021-03-29 07:47:51');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `agripreneur_du_moi_article`
+--
+
+DROP TABLE IF EXISTS `agripreneur_du_moi_article`;
+CREATE TABLE IF NOT EXISTS `agripreneur_du_moi_article` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `article_id` int(11) NOT NULL,
+  `agripreneur_du_moi_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `agripreneur_du_moi_article`
+--
+
+INSERT INTO `agripreneur_du_moi_article` (`id`, `article_id`, `agripreneur_du_moi_id`) VALUES
+(1, 2, 1),
+(2, 3, 1),
+(3, 3, 2),
+(4, 2, 3),
+(5, 3, 3);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `articles`
 --
 
@@ -40,16 +87,48 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `publier` tinyint(4) DEFAULT '0',
+  `video_youtube` tinytext COLLATE utf8mb4_unicode_ci,
+  `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `articles`
 --
 
-INSERT INTO `articles` (`id`, `nom`, `contenu`, `resume`, `slug`, `vues`, `categorie_id`, `image`, `created_at`, `updated_at`, `publier`) VALUES
-(2, 'Bessala Akogo Aristide', '<p>hjkhjkhjk</p>', '<p>hjkhjk</p>', 'bessala-akogo-aristide', NULL, 1, 'articles\\March2021\\wD6I0NCqIi3jVhjdUdns.jpg', '2021-03-20 13:25:08', '2021-03-20 13:25:08', 0),
-(3, 'rtertert', '<p>erter</p>', '<p>tretert</p>', 'rtertert', NULL, 1, 'articles\\March2021\\qR55zZ0jt4Bf7yjQj2tQ.PNG', '2021-03-20 13:37:00', '2021-03-21 08:03:27', 1);
+INSERT INTO `articles` (`id`, `nom`, `contenu`, `resume`, `slug`, `vues`, `categorie_id`, `image`, `created_at`, `updated_at`, `publier`, `video_youtube`, `user_id`) VALUES
+(2, 'Laravel vs Symfony', '<h1 style=\"box-sizing: inherit; margin: 0em 0px 0.5em; font-family: \'Roboto Slab\', \'Helvetica Neue\', sans-serif; line-height: 1.25; padding: 0em; min-height: 1rem; color: rgba(0, 0, 0, 0.8);\">Belligerent and numerous.</h1>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; font-size: 1.25em; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif;\">And when we woke up, we had these bodies. I\'m just glad my fat, ugly mama isn\'t alive to see this day. Okay, I like a challenge. But I\'ve never been to the moon! Uh, is the puppy mechanical in any way?</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Professor, make a woman out of me. And then the battle\'s not so bad?&nbsp;<strong style=\"box-sizing: inherit;\">Maybe I love you so much I love you no matter who you are pretending to be.</strong>&nbsp;<em style=\"box-sizing: inherit;\">You know the worst thing about being a slave?</em>&nbsp;They make you work, but they don\'t pay you or let you go.</p>\r\n<h2 style=\"box-sizing: inherit; font-family: \'Roboto Slab\', \'Helvetica Neue\', sans-serif; line-height: 1.5; margin: 0px 0px 0.5em; padding: 0em; color: rgba(0, 0, 0, 0.8);\">Too much work. Let\'s burn it and say we dumped it in the sewer.</h2>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">In your time, yes, but nowadays shut up! Besides, these are adult stemcells, harvested from perfectly healthy adults whom I killed for their stemcells. Fatal. Aww, it\'s true. I\'ve been hiding it for so long.</p>\r\n<ol style=\"box-sizing: inherit; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">Yes, I saw. You were doing well, until everyone died.</li>\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">Bender, I didn\'t know you liked cooking. That\'s so cute.</li>\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">There\'s one way and only one way to determine if an animal is intelligent. Dissect its brain!</li>\r\n</ol>\r\n<h3 style=\"box-sizing: inherit; font-family: \'Roboto Slab\', \'Helvetica Neue\', sans-serif; line-height: 1.33em; margin: calc(2rem - 0.165em) 0em 1rem; padding: 0em; font-size: 1.28rem; color: rgba(0, 0, 0, 0.8);\">Tell them I hate them.</h3>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">You seem malnourished. Are you suffering from intestinal parasites? Ask her how her day was. For example, if you killed your grandfather, you\'d cease to exist! Then we\'ll go with that data file! But I\'ve never been to the moon!</p>\r\n<ul style=\"box-sizing: inherit; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">Why yes! Thanks for noticing.</li>\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">I am the man with no name, Zapp Brannigan!</li>\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">This is the worst part. The calm before the battle.</li>\r\n</ul>', '<h5 style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">yet the pain was so intense, that it felt to him like fifteen years. And it goes without saying, it caused him to empty his bowels.</h5>', 'laravel-vs-symfony', NULL, 1, 'articles\\March2021\\JCMSTqQwfqPdENJRA4ij.jpeg', '2021-03-20 13:25:00', '2021-03-29 15:48:29', 1, 'xGvIdbB67Qs', 1),
+(3, 'Article', '<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I\'m Santa Claus! We\'ll go deliver this crate like professionals, and then we\'ll go home. Check it out, y\'all. Everyone who was invited is here. I\'ve got to find a way to escape the horrible ravages of youth. Suddenly, I\'m going to the bathroom like clockwork, every three hours. And those jerks at Social Security stopped sending me checks. Now \'I\'\' have to pay \'\'them\'!</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I don\'t \'need\' to drink. I can quit anytime I want! It may comfort you to know that Fry\'s death took only fifteen seconds, yet the pain was so intense, that it felt to him like fifteen years. And it goes without saying, it caused him to empty his bowels.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Now that the, uh, garbage ball is in space, Doctor, perhaps you can help me with my sexual inhibitions? And from now on you\'re all named Bender Jr. Your best is an idiot! I\'m sure those windmills will keep them cool.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Now Fry, it\'s been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I don\'t \'need\' to drink. I can quit anytime I want! Have you ever tried just turning off the TV, sitting down with your children, and hitting them?</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">We need rest. The spirit is willing, but the flesh is spongy and bruised. Does anybody else feel jealous and aroused and worried? Hey, you add a one and two zeros to that or we walk! You are the last hope of the universe.</p>', '<h5 style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">yet the pain was so intense, that it felt to him like fifteen years. And it goes without saying, it caused him to empty his bowels.</h5>', 'article', NULL, 1, 'articles\\March2021\\qR55zZ0jt4Bf7yjQj2tQ.PNG', '2021-03-20 13:37:00', '2021-03-29 15:49:19', 1, 'l0U7SxXHkPY', 1),
+(4, 'Sunt similique Nam e', '<p style=\"box-sizing: inherit; margin: 0em 0px 0.5em; line-height: 1.5; font-size: 1.25em; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif;\">o many poorly chosen words in that sentence. I\'m half machine. I\'m a monster. There\'s so many poorly chosen words in that sentence. Get me a vodka rocks. And a piece of toast.</p>\r\n<h1 style=\"box-sizing: inherit; margin: 0px 0px 0.5em; font-family: \'Roboto Slab\', \'Helvetica Neue\', sans-serif; line-height: 1.25; padding: 0em; min-height: 1rem; color: rgba(0, 0, 0, 0.8);\">You look&hellip;perfect.</h1>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I love Halloween. The one time of year when everyone wears a mask &hellip; not just me. I\'m really more an apartment person. God created pudding, and then he rested. I\'m really more an apartment person.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I\'m a sociopath; there\'s not much he can do for me. Keep your mind limber. You all right, Dexter?&nbsp;<strong style=\"box-sizing: inherit;\">I like seafood.</strong>&nbsp;<em style=\"box-sizing: inherit;\">Rorschach would say you have a hard time relating to others.</em>&nbsp;I like seafood.</p>\r\n<h2 style=\"box-sizing: inherit; font-family: \'Roboto Slab\', \'Helvetica Neue\', sans-serif; line-height: 1.5; margin: 0px 0px 0.5em; padding: 0em; color: rgba(0, 0, 0, 0.8);\">I\'m really more an apartment person.</h2>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Only you could make those words cute. You\'re a killer. I catch killers. I will not kill my sister. I will not kill my sister. I will not kill my sister. God created pudding, and then he rested. You look&hellip;perfect.</p>\r\n<ol style=\"box-sizing: inherit; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">Under normal circumstances, I\'d take that as a compliment.</li>\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">You look&hellip;perfect.</li>\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">I\'m going to tell you something that I\'ve never told anyone before.</li>\r\n</ol>\r\n<h3 style=\"box-sizing: inherit; font-family: \'Roboto Slab\', \'Helvetica Neue\', sans-serif; line-height: 1.33em; margin: calc(2rem - 0.165em) 0em 1rem; padding: 0em; font-size: 1.28rem; color: rgba(0, 0, 0, 0.8);\">Like a sloth. I can do that.</h3>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I\'m Dexter, and I\'m not sure what I am. I\'m a sociopath; there\'s not much he can do for me. Somehow, I doubt that. You have a good heart, Dexter. I think he\'s got a crush on you, Dex! You all right, Dexter?</p>\r\n<ul style=\"box-sizing: inherit; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">He taught me a code. To survive.</li>\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">Only you could make those words cute.</li>\r\n<li style=\"box-sizing: inherit; font-size: 1em; line-height: 1.5em; margin-bottom: 0.5em;\">I\'m Dexter, and I\'m not sure what I am.</li>\r\n</ul>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I have a dark side, too. I\'m generally confused most of the time. I\'ve lived in darkness a long time. Over the years my eyes adjusted until the dark became my world and I could see. I think he\'s got a crush on you, Dex!</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I\'m not the monster he wants me to be. So I\'m neither man nor beast. I\'m something new entirely. With my own set of rules. I\'m Dexter. Boo. I\'m not the monster he wants me to be. So I\'m neither man nor beast. I\'m something new entirely. With my own set of rules. I\'m Dexter. Boo.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Tell him time is of the essence. You\'re a killer. I catch killers. I like seafood. I\'m really more an apartment person. I\'m a sociopath; there\'s not much he can do for me.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I have a dark side, too. I am not a killer. I\'m not the monster he wants me to be. So I\'m neither man nor beast. I\'m something new entirely. With my own set of rules. I\'m Dexter. Boo. This man is a knight in shining armor.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">God created pudding, and then he rested. Like a sloth. I can do that. Finding a needle in a haystack isn\'t hard when every straw is computerized. I love Halloween. The one time of year when everyone wears a mask &hellip; not just me.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">You look&hellip;perfect. Pretend. You pretend the feelings are there, for the world, for the people around you. Who knows? Maybe one day they will be. I\'m partial to air conditioning. Cops, another community I\'m not part of.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I\'m really more an apartment person. Like a sloth. I can do that. Hello, Dexter Morgan. I\'m thinking two circus clowns dancing. You?</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Cops, another community I\'m not part of. Hello, Dexter Morgan. Under normal circumstances, I\'d take that as a compliment. Only you could make those words cute. I\'m doing mental jumping jacks. I\'m really more an apartment person.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">You all right, Dexter? I\'m going to tell you something that I\'ve never told anyone before. I\'m doing mental jumping jacks. I\'m Dexter, and I\'m not sure what I am.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Makes me a &hellip; scientist. God created pudding, and then he res</p>', '<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">&nbsp;</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">You all right, Dexter? I\'m going to tell you something that I\'ve never told anyone before. I\'m doing mental jumping jacks. I\'m Dexter, and I\'m not sure what I am.</p>', 'sunt-similique-nam-e', 0, 1, 'articles\\March2021\\ChKSOAvDCcxK7mM3waV1.jpg', '2021-03-14 18:49:00', '2021-03-29 15:50:01', 1, 'xGvIdbB67Qs', 1),
+(5, 'Sunt similique Nam eaasd', '<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">All I want is to be a monkey of moderate intelligence who wears a suit&hellip; that\'s why I\'m transferring to business school! It\'s toe-tappingly tragic! WINDMILLS DO NOT WORK THAT WAY! GOOD NIGHT! Hey! I\'m a porno-dealing monster, what do I care what you think?</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Daylight and everything. For the last time, I don\'t like lilacs! Your \'first\' wife was the one who liked lilacs! No, of course not. It was&hellip; uh&hellip; porno. Yeah, that\'s it. Large bet on myself in round one.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Who said that? SURE you can die! You want to die?! Why, those are the Grunka-Lunkas! They work here in the Slurm factory. Ooh, name it after me! I never loved you.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Is that a cooking show? Yep, I remember. They came in last at the Olympics, then retired to promote alcoholic beverages! And until then, I can never die? And why did \'I\' have to take a cab? Actually, that\'s still true.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">Why yes! Thanks for noticing. Of all the friends I\'ve had&hellip; you\'re the first. Son, as your lawyer, I declare y\'all are in a 12-piece bucket o\' trouble. But I done struck you a deal: Five hours of community service cleanin\' up that ol\' mess you caused.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh&hellip; also, comes with double prize money. Fry, you can\'t just sit here in the dark listening to classical music.</p>\r\n<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">That could be \'my\' beautiful soul sitting naked on a couch. If I could just learn to play this stupid thing. I wish! It\'s a nickel. Yes, except the Dave Matthews Band doesn\'t rock. Negative, bossy meat creature!</p>', '<p style=\"box-sizing: inherit; margin: 0px 0px 0.5em; line-height: 1.5; color: rgba(0, 0, 0, 0.8); font-family: Roboto, \'Helvetica Neue\', sans-serif; font-size: 16px;\">All I want is to be a monkey of moderate intelligence who wears a suit&hellip; that\'s why I\'m transferring to business school! It\'s toe-</p>', 'sunt-similique-nam-eaasd', 0, 1, 'articles\\March2021\\MSEsSR33qTOh2IX7ZwQt.jpg', '2021-03-21 18:56:00', '2021-03-29 15:56:32', 1, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `a_la_unes`
+--
+
+DROP TABLE IF EXISTS `a_la_unes`;
+CREATE TABLE IF NOT EXISTS `a_la_unes` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `article_id` int(11) NOT NULL,
+  `article1_bloc1` int(11) DEFAULT NULL,
+  `article2_bloc1` int(11) DEFAULT NULL,
+  `titre_bloc1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `titre_bloc2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `article1_bloc2` int(11) DEFAULT NULL,
+  `article2_bloc2` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `a_la_unes`
+--
+
+INSERT INTO `a_la_unes` (`id`, `article_id`, `article1_bloc1`, `article2_bloc1`, `titre_bloc1`, `titre_bloc2`, `article1_bloc2`, `article2_bloc2`, `created_at`, `updated_at`) VALUES
+(1, 2, 2, 2, 'AGRIPRENEUR TV', 'TRANSFORMATION', 3, 3, '2021-03-28 18:25:24', '2021-03-28 18:25:24');
 
 -- --------------------------------------------------------
 
@@ -67,16 +146,41 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `categories`
 --
 
 INSERT INTO `categories` (`id`, `nom`, `description`, `slug`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Aristide', '<p>456456</p>', 'aristide', 'categories\\March2021\\hQ95MbB7VeIceHEiKTK4.jpg', '2021-03-20 12:56:19', '2021-03-20 12:56:19'),
-(2, 'tert etrtert', '<p>ertertet</p>', 'tert-etrtert', 'categories\\March2021\\AcJnR25iCfV1HAZy47ko.PNG', '2021-03-21 07:56:15', '2021-03-21 07:56:15'),
-(3, 'ertertet', '<p>werwer</p>', 'ertertet', 'categories\\March2021\\pnmlpLhCCVxuihaAYDTq.PNG', '2021-03-21 07:56:31', '2021-03-21 07:56:31');
+(1, 'Technologie', '<p>456456</p>', 'technologie', 'categories\\March2021\\hQ95MbB7VeIceHEiKTK4.jpg', '2021-03-20 12:56:00', '2021-03-28 11:34:14'),
+(2, 'TV', '<p>Videos</p>', 'tv', 'categories\\March2021\\AcJnR25iCfV1HAZy47ko.PNG', '2021-03-21 07:56:00', '2021-03-28 11:36:05'),
+(3, 'Agriculture', '<p>werwer</p>', 'agriculture', 'categories\\March2021\\pnmlpLhCCVxuihaAYDTq.PNG', '2021-03-21 07:56:00', '2021-03-28 11:34:31'),
+(4, 'Culture', '<p>Culture</p>', 'culture', 'categories\\March2021\\E4Ej6kbZe97fuLwcaTpU.png', '2021-03-27 20:56:00', '2021-03-28 11:33:59');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `categories_bas_de_pages`
+--
+
+DROP TABLE IF EXISTS `categories_bas_de_pages`;
+CREATE TABLE IF NOT EXISTS `categories_bas_de_pages` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `categorie1` int(11) NOT NULL,
+  `categorie2` int(11) NOT NULL,
+  `categorie3` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `categories_bas_de_pages`
+--
+
+INSERT INTO `categories_bas_de_pages` (`id`, `created_at`, `updated_at`, `categorie1`, `categorie2`, `categorie3`) VALUES
+(4, '2021-03-28 11:16:06', '2021-03-28 11:16:06', 1, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -101,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `data_rows` (
   `order` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `data_rows_data_type_id_foreign` (`data_type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `data_rows`
@@ -134,7 +238,7 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (24, 4, 'description', 'rich_text_box', 'Description', 0, 1, 1, 1, 1, 1, '{}', 4),
 (25, 4, 'slug', 'text', 'Slug', 0, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"nom\",\"forceUpdate\":true}}', 5),
 (26, 4, 'image', 'image', 'Image', 0, 1, 1, 1, 1, 1, '{\"description\":\"Image de la cat\\u00e9gorie\",\"display\":{\"width\":\"6\",\"id\":\"nom_categorie\"}}', 3),
-(27, 4, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 6),
+(27, 4, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 1, 1, '{}', 6),
 (28, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
 (29, 5, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (30, 5, 'nom', 'text', 'Nom', 1, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"3\",\"id\":\"nom_article\"},\"validation\":{\"rule\":\"unique:articles\",\"messages\":{\"unique\":\"Ce nom est d\\u00e9ja utilis\\u00e9\"}}}', 2),
@@ -144,10 +248,48 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (34, 5, 'vues', 'number', 'Vues', 0, 1, 1, 0, 0, 1, '{\"default\":\"0\"}', 9),
 (35, 5, 'categorie_id', 'text', 'Categorie Id', 0, 1, 1, 1, 1, 1, '{}', 6),
 (36, 5, 'image', 'image', 'Image', 1, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"3\",\"id\":\"image_article\"}}', 5),
-(37, 5, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 10),
+(37, 5, 'created_at', 'timestamp', 'Date de Création', 0, 1, 1, 1, 1, 1, '{}', 10),
 (38, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11),
 (39, 5, 'article_belongsto_category_relationship', 'relationship', 'Catégorie', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"3\",\"id\":\"categorie_article\"},\"model\":\"App\\\\Category\",\"table\":\"categories\",\"type\":\"belongsTo\",\"column\":\"categorie_id\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
-(40, 5, 'publier', 'checkbox', 'Etat', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"3\",\"id\":\"etat_article\"},\"on\":\"Publier\",\"off\":\"Brouillon\",\"checked\":false}', 4);
+(40, 5, 'publier', 'checkbox', 'Etat', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"3\",\"id\":\"etat_article\"},\"on\":\"Publier\",\"off\":\"Brouillon\",\"checked\":false}', 4),
+(54, 8, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(55, 8, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 2),
+(56, 8, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 3),
+(57, 8, 'categorie1', 'text', 'Categorie1', 1, 1, 1, 1, 1, 1, '{}', 4),
+(58, 8, 'categorie2', 'text', 'Categorie2', 1, 1, 1, 1, 1, 1, '{}', 5),
+(59, 8, 'categorie3', 'text', 'Categorie3', 1, 1, 1, 1, 1, 1, '{}', 6),
+(60, 8, 'categories_bas_de_page_belongsto_category_relationship', 'relationship', 'categories', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Category\",\"table\":\"categories\",\"type\":\"belongsTo\",\"column\":\"categorie1\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":null}', 7),
+(61, 8, 'categories_bas_de_page_belongsto_category_relationship_1', 'relationship', 'categories', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Category\",\"table\":\"categories\",\"type\":\"belongsTo\",\"column\":\"categorie2\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":null}', 8),
+(62, 8, 'categories_bas_de_page_belongsto_category_relationship_2', 'relationship', 'categories', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Category\",\"table\":\"categories\",\"type\":\"belongsTo\",\"column\":\"categorie3\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"articles\",\"pivot\":\"0\",\"taggable\":null}', 9),
+(63, 9, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(64, 9, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 2),
+(65, 9, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 3),
+(66, 9, 'twitter', 'text', 'Twitter', 0, 1, 1, 1, 1, 1, '{}', 4),
+(67, 9, 'facebook', 'text', 'Facebook', 0, 1, 1, 1, 1, 1, '{}', 5),
+(68, 9, 'instagram', 'text', 'Instagram', 0, 1, 1, 1, 1, 1, '{}', 6),
+(69, 9, 'linkedin', 'text', 'Linkedin', 0, 1, 1, 1, 1, 1, '{}', 7),
+(70, 9, 'youtube', 'text', 'Youtube', 0, 1, 1, 1, 1, 1, '{}', 8),
+(71, 10, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(72, 10, 'article_id', 'text', 'Article Id', 1, 1, 1, 1, 1, 1, '{}', 2),
+(73, 10, 'a_la_une_belongsto_article_relationship', 'relationship', 'A la Une (Video)', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Article\",\"table\":\"articles\",\"type\":\"belongsTo\",\"column\":\"article_id\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"a_la_unes\",\"pivot\":\"0\",\"taggable\":\"0\"}', 3),
+(74, 10, 'article1_bloc1', 'text', 'Article1 Bloc1', 0, 1, 1, 1, 1, 1, '{}', 4),
+(75, 10, 'article2_bloc1', 'text', 'Article2 Bloc1', 0, 1, 1, 1, 1, 1, '{}', 5),
+(76, 10, 'titre_bloc1', 'text', 'Titre Bloc1', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"4\",\"id\":\"titre_bloc1\"}}', 8),
+(77, 10, 'titre_bloc2', 'text', 'Titre Bloc2', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"4\",\"id\":\"titre_bloc2\"}}', 11),
+(78, 10, 'article1_bloc2', 'text', 'Article1 Bloc2', 0, 1, 1, 1, 1, 1, '{}', 6),
+(79, 10, 'article2_bloc2', 'text', 'Article2 Bloc2', 0, 1, 1, 1, 1, 1, '{}', 7),
+(80, 10, 'a_la_une_belongsto_article_relationship_1', 'relationship', 'Article 1 Bloc 1', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"4\",\"id\":\"article1_bloc1\"},\"model\":\"App\\\\Article\",\"table\":\"articles\",\"type\":\"belongsTo\",\"column\":\"article1_bloc1\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"a_la_unes\",\"pivot\":\"0\",\"taggable\":\"0\"}', 9),
+(81, 10, 'a_la_une_belongsto_article_relationship_2', 'relationship', 'Article 2 Bloc 1', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"4\",\"id\":\"article2_bloc1\"},\"model\":\"App\\\\Article\",\"table\":\"articles\",\"type\":\"belongsTo\",\"column\":\"article2_bloc1\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"a_la_unes\",\"pivot\":\"0\",\"taggable\":\"0\"}', 10),
+(82, 10, 'a_la_une_belongsto_article_relationship_3', 'relationship', 'Article 1 Bloc 2', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"4\",\"id\":\"article1_bloc2\"},\"model\":\"App\\\\Article\",\"table\":\"articles\",\"type\":\"belongsTo\",\"column\":\"article1_bloc2\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"a_la_unes\",\"pivot\":\"0\",\"taggable\":\"0\"}', 12),
+(83, 10, 'a_la_une_belongsto_article_relationship_4', 'relationship', 'Article 2 Bloc 2', 0, 1, 1, 1, 1, 1, '{\"display\":{\"width\":\"4\",\"id\":\"article2_bloc2\"},\"model\":\"App\\\\Article\",\"table\":\"articles\",\"type\":\"belongsTo\",\"column\":\"article2_bloc2\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"a_la_unes\",\"pivot\":\"0\",\"taggable\":\"0\"}', 13),
+(94, 14, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(95, 14, 'tire_bloc', 'text', 'Tire Bloc', 1, 1, 1, 1, 1, 1, '{}', 2),
+(96, 14, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 1, 0, 1, '{}', 3),
+(97, 14, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 4),
+(98, 14, 'agripreneur_du_moi_belongstomany_article_relationship', 'relationship', 'articles', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Article\",\"table\":\"articles\",\"type\":\"belongsToMany\",\"column\":\"id\",\"key\":\"id\",\"label\":\"nom\",\"pivot_table\":\"agripreneur_du_moi_article\",\"pivot\":\"1\",\"taggable\":\"on\"}', 5),
+(99, 5, 'article_belongsto_user_relationship', 'relationship', 'Auteur', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Models\\\\User\",\"table\":\"users\",\"type\":\"belongsTo\",\"column\":\"user_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"a_la_unes\",\"pivot\":\"0\",\"taggable\":\"0\"}', 13),
+(100, 5, 'video_youtube', 'text', 'Video Youtube', 0, 1, 1, 1, 1, 1, '{}', 12),
+(101, 5, 'user_id', 'text', 'User Id', 0, 1, 1, 1, 1, 1, '{}', 13);
 
 -- --------------------------------------------------------
 
@@ -175,7 +317,7 @@ CREATE TABLE IF NOT EXISTS `data_types` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `data_types_name_unique` (`name`),
   UNIQUE KEY `data_types_slug_unique` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `data_types`
@@ -185,8 +327,12 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2021-03-17 18:40:34', '2021-03-17 18:40:34'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2021-03-17 18:40:34', '2021-03-17 18:40:34'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2021-03-17 18:40:34', '2021-03-17 18:40:34'),
-(4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'App\\Category', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2021-03-20 12:43:20', '2021-03-21 07:57:48'),
-(5, 'articles', 'articles', 'Article', 'Articles', 'voyager-documentation', 'App\\Article', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2021-03-20 13:09:55', '2021-03-21 08:08:31');
+(4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'App\\Category', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2021-03-20 12:43:20', '2021-03-27 19:55:39'),
+(5, 'articles', 'articles', 'Article', 'Articles', 'voyager-documentation', 'App\\Article', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2021-03-20 13:09:55', '2021-03-29 14:15:25'),
+(8, 'categories_bas_de_pages', 'categories-bas-de-pages', 'Categories Bas De Page', 'Categories Bas De Pages', 'voyager-logbook', 'App\\CategoriesBasDePage', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-03-27 22:06:58', '2021-03-27 22:06:58'),
+(9, 'social_networks', 'social-networks', 'Reseaux sociaux', 'Social Networks', NULL, 'App\\SocialNetwork', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2021-03-28 10:40:17', '2021-03-28 10:40:17'),
+(10, 'a_la_unes', 'a-la-unes', 'A La Une', 'A La Unes', 'voyager-diamond', 'App\\ALaUne', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2021-03-28 18:08:22', '2021-03-28 18:23:40'),
+(14, 'agripreneur_du_mois', 'agripreneur-du-mois', 'Agripreneur Du Moi', 'Articles du mois', NULL, 'App\\AgripreneurDuMoi', NULL, NULL, NULL, 1, 0, '{\"order_column\":\"id\",\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null}', '2021-03-29 08:20:18', '2021-03-29 08:20:18');
 
 -- --------------------------------------------------------
 
@@ -205,6 +351,19 @@ CREATE TABLE IF NOT EXISTS `failed_jobs` (
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `home_a_la_unes`
+--
+
+DROP TABLE IF EXISTS `home_a_la_unes`;
+CREATE TABLE IF NOT EXISTS `home_a_la_unes` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `categorie_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -253,7 +412,7 @@ CREATE TABLE IF NOT EXISTS `menu_items` (
   `parameters` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `menu_items_menu_id_foreign` (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `menu_items`
@@ -272,11 +431,15 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, 13, 2, '2021-03-17 18:40:34', '2021-03-20 08:13:04', 'voyager.settings.index', NULL),
 (11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 13, 1, '2021-03-17 18:40:35', '2021-03-20 08:13:01', 'voyager.hooks', NULL),
 (12, 1, 'Gestion des Utilisateurs', '', '_self', 'voyager-group', '#000000', NULL, 2, '2021-03-20 08:11:57', '2021-03-20 08:12:07', NULL, ''),
-(13, 1, 'Systeme', '', '_self', 'voyager-anchor', '#000000', NULL, 5, '2021-03-20 08:12:55', '2021-03-20 12:19:46', NULL, ''),
+(13, 1, 'Systeme', '', '_self', 'voyager-anchor', '#000000', NULL, 5, '2021-03-20 08:12:55', '2021-03-27 21:37:38', NULL, ''),
 (14, 1, 'Gestion des Articles', '', '_self', 'voyager-file-text', '#000000', NULL, 3, '2021-03-20 12:18:02', '2021-03-20 12:19:37', NULL, ''),
-(15, 1, 'Pages', '', '_self', 'voyager-receipt', '#000000', NULL, 4, '2021-03-20 12:18:53', '2021-03-20 12:19:46', NULL, ''),
 (16, 1, 'Categories', '', '_self', 'voyager-categories', NULL, 14, 1, '2021-03-20 12:43:20', '2021-03-20 12:44:07', 'voyager.categories.index', NULL),
-(17, 1, 'Articles', '', '_self', 'voyager-documentation', NULL, 14, 2, '2021-03-20 13:09:55', '2021-03-20 13:20:47', 'voyager.articles.index', NULL);
+(17, 1, 'Articles', '', '_self', 'voyager-documentation', NULL, 14, 2, '2021-03-20 13:09:55', '2021-03-20 13:20:47', 'voyager.articles.index', NULL),
+(18, 1, 'HomePage', '', '_self', 'voyager-home', '#000000', NULL, 4, '2021-03-27 21:10:02', '2021-03-27 21:37:38', NULL, ''),
+(21, 1, 'Categories Bas De Pages', '', '_self', 'voyager-logbook', NULL, 18, 4, '2021-03-27 22:06:59', '2021-03-29 07:57:15', 'voyager.categories-bas-de-pages.index', NULL),
+(22, 1, 'Social Networks', '', '_self', 'voyager-phone', '#000000', 18, 2, '2021-03-28 10:40:17', '2021-03-29 07:57:15', 'voyager.social-networks.index', 'null'),
+(23, 1, 'A La Unes', '', '_self', 'voyager-diamond', NULL, 18, 3, '2021-03-28 18:08:22', '2021-03-29 07:57:15', 'voyager.a-la-unes.index', NULL),
+(26, 1, 'Articles du mois', '', '_self', 'voyager-file-text', '#000000', 18, 1, '2021-03-29 08:20:18', '2021-03-29 08:29:32', 'voyager.agripreneur-du-mois.index', 'null');
 
 -- --------------------------------------------------------
 
@@ -350,7 +513,7 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `permissions_key_index` (`key`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `permissions`
@@ -392,7 +555,27 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (33, 'read_articles', 'articles', '2021-03-20 13:09:55', '2021-03-20 13:09:55'),
 (34, 'edit_articles', 'articles', '2021-03-20 13:09:55', '2021-03-20 13:09:55'),
 (35, 'add_articles', 'articles', '2021-03-20 13:09:55', '2021-03-20 13:09:55'),
-(36, 'delete_articles', 'articles', '2021-03-20 13:09:55', '2021-03-20 13:09:55');
+(36, 'delete_articles', 'articles', '2021-03-20 13:09:55', '2021-03-20 13:09:55'),
+(47, 'browse_categories_bas_de_pages', 'categories_bas_de_pages', '2021-03-27 22:06:59', '2021-03-27 22:06:59'),
+(48, 'read_categories_bas_de_pages', 'categories_bas_de_pages', '2021-03-27 22:06:59', '2021-03-27 22:06:59'),
+(49, 'edit_categories_bas_de_pages', 'categories_bas_de_pages', '2021-03-27 22:06:59', '2021-03-27 22:06:59'),
+(50, 'add_categories_bas_de_pages', 'categories_bas_de_pages', '2021-03-27 22:06:59', '2021-03-27 22:06:59'),
+(51, 'delete_categories_bas_de_pages', 'categories_bas_de_pages', '2021-03-27 22:06:59', '2021-03-27 22:06:59'),
+(52, 'browse_social_networks', 'social_networks', '2021-03-28 10:40:17', '2021-03-28 10:40:17'),
+(53, 'read_social_networks', 'social_networks', '2021-03-28 10:40:17', '2021-03-28 10:40:17'),
+(54, 'edit_social_networks', 'social_networks', '2021-03-28 10:40:17', '2021-03-28 10:40:17'),
+(55, 'add_social_networks', 'social_networks', '2021-03-28 10:40:17', '2021-03-28 10:40:17'),
+(56, 'delete_social_networks', 'social_networks', '2021-03-28 10:40:17', '2021-03-28 10:40:17'),
+(57, 'browse_a_la_unes', 'a_la_unes', '2021-03-28 18:08:22', '2021-03-28 18:08:22'),
+(58, 'read_a_la_unes', 'a_la_unes', '2021-03-28 18:08:22', '2021-03-28 18:08:22'),
+(59, 'edit_a_la_unes', 'a_la_unes', '2021-03-28 18:08:22', '2021-03-28 18:08:22'),
+(60, 'add_a_la_unes', 'a_la_unes', '2021-03-28 18:08:22', '2021-03-28 18:08:22'),
+(61, 'delete_a_la_unes', 'a_la_unes', '2021-03-28 18:08:22', '2021-03-28 18:08:22'),
+(72, 'browse_agripreneur_du_mois', 'agripreneur_du_mois', '2021-03-29 08:20:18', '2021-03-29 08:20:18'),
+(73, 'read_agripreneur_du_mois', 'agripreneur_du_mois', '2021-03-29 08:20:18', '2021-03-29 08:20:18'),
+(74, 'edit_agripreneur_du_mois', 'agripreneur_du_mois', '2021-03-29 08:20:18', '2021-03-29 08:20:18'),
+(75, 'add_agripreneur_du_mois', 'agripreneur_du_mois', '2021-03-29 08:20:18', '2021-03-29 08:20:18'),
+(76, 'delete_agripreneur_du_mois', 'agripreneur_du_mois', '2021-03-29 08:20:18', '2021-03-29 08:20:18');
 
 -- --------------------------------------------------------
 
@@ -449,7 +632,27 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (33, 1),
 (34, 1),
 (35, 1),
-(36, 1);
+(36, 1),
+(47, 1),
+(48, 1),
+(49, 1),
+(50, 1),
+(51, 1),
+(52, 1),
+(53, 1),
+(54, 1),
+(55, 1),
+(56, 1),
+(57, 1),
+(58, 1),
+(59, 1),
+(60, 1),
+(61, 1),
+(72, 1),
+(73, 1),
+(74, 1),
+(75, 1),
+(76, 1);
 
 -- --------------------------------------------------------
 
@@ -515,6 +718,32 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `social_networks`
+--
+
+DROP TABLE IF EXISTS `social_networks`;
+CREATE TABLE IF NOT EXISTS `social_networks` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `twitter` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `facebook` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `instagram` text COLLATE utf8mb4_unicode_ci,
+  `linkedin` text COLLATE utf8mb4_unicode_ci,
+  `youtube` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `social_networks`
+--
+
+INSERT INTO `social_networks` (`id`, `created_at`, `updated_at`, `twitter`, `facebook`, `instagram`, `linkedin`, `youtube`) VALUES
+(1, '2021-03-29 08:31:24', '2021-03-29 08:31:24', 'Unde adipisci et ani', 'Laboriosam harum fa', 'Quaerat reprehenderi', 'Minus sunt aliquip', 'Aliquam inventore nu');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `translations`
 --
 
@@ -561,7 +790,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'big_notorious', 'bessala93@gmail.com', 'users/default.png', NULL, '$2y$10$k48hBp8KBi3Xx2fhzhf2p.4SIeaBOLPfZjJRZ2TSKa8WBuS6wpWZu', NULL, NULL, '2021-03-17 18:42:51', '2021-03-17 18:42:51');
+(1, 1, 'BESSALA Aristide', 'bessala93@gmail.com', 'users\\March2021\\SB0T6caiQqqP2wPgaWD1.jpg', NULL, '$2y$10$k48hBp8KBi3Xx2fhzhf2p.4SIeaBOLPfZjJRZ2TSKa8WBuS6wpWZu', NULL, '{\"locale\":\"en\"}', '2021-03-17 18:42:51', '2021-03-29 14:12:50');
 
 -- --------------------------------------------------------
 

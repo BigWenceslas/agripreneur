@@ -17,7 +17,8 @@ Route::get('/','App\Http\Controllers\HomeController@homepage')->name('home');
 //Articles
 Route::get('/articles', 'App\Http\Controllers\ArticlesController@index')->name('articles');
 Route::get('/article/{slug}', 'App\Http\Controllers\ArticlesController@details')->name('details_article');
-Route::get('/articles/categorie/{slug}', 'App\Http\Controllers\ArticlesController@liste_par_categorie')->name('article_par_categorie');
+Route::get('/categorie/{slug}', 'App\Http\Controllers\ArticlesController@liste_par_categorie')->name('article_par_categorie');
+Route::post('/recherche', 'App\Http\Controllers\ArticlesController@recherche')->name('recherche');
 //Fin Articles
 
 Route::group(['prefix' => 'admin'], function () {
