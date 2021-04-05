@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--::::: FABICON ICON :::::::-->
-	<link rel="icon" href="{{asset('assets/img/icon/fabicon.png')}}">
+	<link rel="icon" href="{{asset('assets/img/agri.jpg')}}">
 	<!--::::: ALL CSS FILES :::::::-->
 	<link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/plugins/animate.min.css')}}">
@@ -56,26 +56,14 @@
 				<div class="col-8 col-lg-8">
 					<div class="newsprk_nav stellarnav">
 						<ul id="newsprk_menu">
-							<li><a href="#">Emission </i></a>
-								
-							</li>
-							<li><a href="#">Decouverte</i></a>
-								
-							</li>
-							<li><a href="#">Nos marchés</i></a>
-								
-							</li>
-							<li><a href="#">Gallerie Photo</i></a>
-
-
-							</li>
+							<li><a href="#">Emission </i></a></li>
+							<li><a href="#">Decouverte</i></a></li>
+							<li><a href="#">Nos marchés</i></a></li>
+							<li><a href="#">Gallerie Photo</i></a></li>
 							<li><a href="#world">Agenda</a></li>
 							<li><a href="#sports">Sante</a></li>
-							<li><a href="contact.html">Nous suivrrent sur whatsapp</a></li>
+							<li><a href="contact.html">Nous suivent sur whatsapp</a></li>
                             <li class="search_btn"><i class="far fa-search"></i>
-							
-							
-							
 						</ul>
 				
 					</div>
@@ -111,7 +99,7 @@
 				<div class="col-lg-4 align-self-center">
 					<div class="logo">
 						<a href="{{route('home')}}">
-							<img src="{{asset('assets/img/logo/logo.png')}}" alt="image">
+							<img src="{{asset('assets/img/agri.jpg')}}" alt="image">
 						</a>
 					</div>
 				</div>
@@ -151,18 +139,16 @@
 	<!--::::: MENU AREA END :::::::-->
 
     @yield('content_body')
-
+	<!--::::: ENTERTAINMENT AREA :::::::-->
+	<div class="space-70"></div>
+	<!--::::: ENTERTAINMENT AREA END :::::::-->
     <!--::::: FOOTER AREA START :::::::-->
 	<div class="footer footer_area1 primay_bg">
 		<div class="container">
 			<div class="cta">
 				<div class="row">
 					<div class="col-md-6 align-self-center">
-						<div class="footer_logo logo">
-							<a href="index.html">
-								<img src="assets/img/logo/footer_logo.png" alt="logo">
-							</a>
-						</div>
+						
 						<div class="social2">
 							<ul class="inline">
 								<li><a href="#"><i class="fab fa-instagram"></i></a>
@@ -194,42 +180,38 @@
 					<div class="row">
 						<div class="col-sm-6 col-lg">
 							<div class="single_footer_nav border_white_right">
-								<h3 class="widget-title2">News categories</h3>
+								<h3 class="widget-title2">Menu principal</h3>
 								<div class="row">
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="#">Politics</a>
+											<li><a href="#">Acceuil</a>
 											</li>
-											<li><a href="#">Business</a>
+											<li><a href="#">Culture</a>
 											</li>
-											<li><a href="#">TECHNOLOGY</a>
+											<li><a href="#">Peche</a>
 											</li>
-											<li><a href="#">Science</a>
+											<li><a href="#">Elevage</a>
 											</li>
-											<li><a href="#">Health</a>
+											<li><a href="#">Environement</a>
 											</li>
-											<li><a href="#">Sports</a>
-											</li>
-											<li><a href="#">Entertainment</a>
-											</li>
+											
 										</ul>
 									</div>
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="#">Education</a>
+											<li><a href="#">Enquette</a>
 											</li>
-											<li><a href="#">Obituaries</a>
+											<li><a href="#">Agritech</a>
 											</li>
-											<li><a href="#">Corrections</a>
+											<li><a href="#">Tv</a>
 											</li>
-											<li><a href="#">Education</a>
+											<li><a href="#">Transformation</a>
 											</li>
-											<li><a href="#">Today’s Paper</a>
+											<li><a href="#">Boutique</a>
 											</li>
-											<li><a href="#">Corrections</a>
+											<li><a href="#">Agritech</a>
 											</li>
-											<li><a href="#">Foods</a>
-											</li>
+										
 										</ul>
 									</div>
 								</div>
@@ -237,42 +219,33 @@
 						</div>
 						<div class="col-sm-6 col-lg">
 							<div class="single_footer_nav">
-								<h3 class="widget-title2">Living</h3>
+								<h3 class="widget-title2">Nos Categories</h3>
 								<div class="row">
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="#">Crossword</a>
+											<li><a href="#">Acceuil</a>
 											</li>
-											<li><a href="#">Food</a>
+											<li><a href="#">Emission</a>
 											</li>
-											<li><a href="#">Automobiles</a>
+											<li><a href="#">Decouverte</a>
 											</li>
-											<li><a href="#">Education</a>
+											<li><a href="#">Nos Marchés</a>
 											</li>
-											<li><a href="#">Health</a>
-											</li>
-											<li><a href="#">Magazine</a>
-											</li>
-											<li><a href="#">Weddings</a>
-											</li>
+											
+											
 										</ul>
 									</div>
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="#">Classifieds</a>
+											<li><a href="#">Gallerie photo</a>
 											</li>
-											<li><a href="#">Photographies</a>
+											<li><a href="#">Agenda</a>
 											</li>
-											<li><a href="#">NYT Store</a>
+											<li><a href="#">Sante</a>
 											</li>
-											<li><a href="#">Journalisms</a>
+											<li><a href="#">Nous suivre sur whatsapp</a>
 											</li>
-											<li><a href="#">Public Editor</a>
-											</li>
-											<li><a href="#">Tools & Services</a>
-											</li>
-											<li><a href="#">My Account</a>
-											</li>
+
 										</ul>
 									</div>
 								</div>
@@ -285,23 +258,15 @@
 					
 				</div>
 				<div class="col-lg-4">
-					<div class="extra_newss border_white_left pl-4">
-						<h3 class="widget-title2">More news</h3>
-						<div class="single_extra_news border_white_bottom">
-							<p>TECHNOLOGY <span> / March 26, 2020</span>
-							</p>	<a href="#">Nancy zhang a chinese busy woman and dhaka</a>
-							<span class="news_counter">1</span>
-						</div>
-						<div class="single_extra_news border_white_bottom">
-							<p>TECHNOLOGY <span> / March 26, 2020</span>
-							</p>	<a href="#">Nancy zhang a chinese busy woman and dhaka</a>
-							<span class="news_counter">2</span>
-						</div>
-					
-						<div class="space-40"></div>
-						<div class="border_white_bottom"></div>
-						<div class="space-40"></div>
+					<div class="col-lg-6">
+						<ul>
+							<li><a href="#">Equipe de redaction</a>
+							</li>
+							<li><a href="#">Contributeurs</a>
+							</li>
 						
+
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -310,25 +275,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 align-self-center">
-						<p>&copy; Copyright 2020, All Rights Reserved</p>
+						<p>&copy; Copyright 2021, All Rights Reserved powered by <a href="https://www.aite-consulting.com/"></a>Aiteconsulting</p>
 					</div>
-					<div class="col-lg-6 align-self-center">
-						<div class="copyright_menus text-right">
-							<div class="language"></div>
-							<div class="copyright_menu inline">
-								<ul>
-									<li><a href="#">About</a>
-									</li>
-									<li><a href="#">Advertise</a>
-									</li>
-									<li><a href="#">Privacy & Policy</a>
-									</li>
-									<li><a href="#">Contact Us</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>

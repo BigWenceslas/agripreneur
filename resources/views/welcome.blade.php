@@ -312,7 +312,6 @@
 			</div>
 		</div>
 	@endif
-	<!--::::: ENTERTAINMENT AREA END :::::::-->
 @endsection
 
 @section('js_files')

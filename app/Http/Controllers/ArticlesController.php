@@ -27,6 +27,8 @@ class ArticlesController extends Controller
     $articles_populaires = Article::where([['publier','=',1]])->orderBy('vues','desc')->take(12)->get();
     //Details Article
     $article = Article::where('slug',$slug)->first();
+    $article->vues = $article->vues + 1;
+    $article->save();
     return view('article.details')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
     'articles_populaires'=>$articles_populaires,'article' => $article]);
     }
