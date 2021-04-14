@@ -14,9 +14,10 @@
 								@if ($a_la_une)
 								<div class="single_post post_type6 xs-mb30">
 									<div class="post_img gradient1">
-										<img src="{{'storage/'. $a_la_une->article_a_la_une->image}}" alt="{{$a_la_une->article_a_la_une->nom}}"><span class="tranding">
+										<img src="{{'storage/'. $a_la_une->article_a_la_une->image}}" alt="{{$a_la_une->article_a_la_une->nom}}">
+										{{-- <span class="tranding">
 											<i class="fas fa-play"></i>
-										</span>
+										</span> --}}
 									</div>
 									<div class="single_post_text">
 										<div class="meta meta_separator1"><a href="{{route('article_par_categorie',['slug'=> $a_la_une->article_a_la_une->slug])}}">{{$a_la_une->article_a_la_une->category->nom}}</a>
@@ -93,9 +94,10 @@
 								<div class="video-responsive">
 								<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$article1_bloc1->video_youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
-							</div>	<span class="tranding">
+							</div>
+							{{-- <span class="tranding">
 								<i class="fas fa-bolt"></i>
-							</span>
+							</span> --}}
 						</div>
 						<div class="single_post_text">
 							<div class="meta3">	<a href="{{route('article_par_categorie',['slug'=> $article1_bloc1->category->slug])}}">{{$article1_bloc1->category->nom}}</a>
@@ -111,9 +113,10 @@
 								<div class="video-responsive">
 								<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$article2_bloc1->video_youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
-							</div>	<span class="tranding">
+							</div>
+							{{-- <span class="tranding">
 								<i class="fas fa-bolt"></i>
-							</span>
+							</span> --}}
 						</div>
 						<div class="single_post_text">
 							<div class="meta3">	<a href="{{route('article_par_categorie',['slug'=> $article2_bloc1->category->slug])}}">{{$article2_bloc1->category->nom}}</a>
@@ -194,9 +197,10 @@
 								<div class="post_img">
 									<div class="img_wrap">
 										<img src="{{'storage/' . $articles_recents[6*$i+$l]->image}}" alt="{{$articles_recents[6*$i+$l]->nom}}">
-									</div>	<span class="tranding">
+									</div>
+									{{-- <span class="tranding">
 										<i class="fas fa-bolt"></i>
-									</span>
+									</span> --}}
 								</div>
 								<div class="single_post_text">
 									<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $articles_recents[6*$i+$l]->slug])}}">{{$articles_recents[6*$i+$l]->category->nom}}</a>
@@ -238,9 +242,10 @@
 						<div class="post_img">
 							<div class="img_wrap">
 								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}">
-							</div>	<span class="tranding">
+							</div>
+							{{-- <span class="tranding">
 								<i class="fas fa-bolt"></i>
-							</span>
+							</span> --}}
 						</div>
 						<div class="single_post_text">
 							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
@@ -265,10 +270,11 @@
 					<div class="single_post widgets_small">
 						<div class="post_img">
 							<div class="img_wrap">
-								<img src="assets/img/trending/transm1.jpg" alt="">
-							</div>	<span class="tranding">
+								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}">
+							</div>
+							{{-- <span class="tranding">
 								<i class="fas fa-bolt"></i>
-							</span>
+							</span> --}}
 						</div>
 						<div class="single_post_text">
 							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
@@ -292,10 +298,11 @@
 					<div class="single_post widgets_small">
 						<div class="post_img">
 							<div class="img_wrap">
-								<img src="assets/img/trending/transm1.jpg" alt="">
-							</div>	<span class="tranding">
+								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}">
+							</div>
+							{{-- <span class="tranding">
 								<i class="fas fa-bolt"></i>
-							</span>
+							</span> --}}
 						</div>
 						<div class="single_post_text">
 							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>

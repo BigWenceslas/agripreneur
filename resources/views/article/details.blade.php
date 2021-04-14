@@ -22,7 +22,7 @@
 								<div class="author_img">
 									<div class="author_img_wrap">
 										<img src="@if($article->auteur){{asset('storage/'.$article->auteur->avatar)}}@else {{asset('assets/img/author/author2.png')}}@endif" 
-										alt="{{$article->auteur->name}}">
+										alt="@if($article->auteur){{$article->auteur->name}}@endif">
 									</div>
 								</div>
 									<a href="#">@if($article->auteur){{$article->auteur->name}}@endif</a>
@@ -92,9 +92,9 @@
 							<div class="single_post post_type3">
 								<div class="post_img">
 									<img src="{{asset('assets/img/bg/video4.jpg')}}" alt="">
-									<span class="tranding">
+									{{-- <span class="tranding">
 										<i class="fas fa-bolt"></i>
-									</span>
+									</span> --}}
 								</div>
 							
 							</div>

@@ -74,11 +74,11 @@
 					
 						<div class="social1">
 							<ul class="inline">
-								<li><a href="{{$reseaux_sociaux->twitter}}"><i class="fab fa-twitter"></i></a>
+								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->twitter}}@endif"><i class="fab fa-twitter"></i></a>
 								</li>
-								<li><a href="{{$reseaux_sociaux->facebook}}"><i class="fab fa-facebook-f"></i></a>
+								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><i class="fab fa-facebook-f"></i></a>
 								</li>
-								<li><a href="{{$reseaux_sociaux->youtube}}"><i class="fab fa-youtube"></i></a>
+								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><i class="fab fa-youtube"></i></a>
 								</li>
 								
 							</ul>
@@ -123,11 +123,11 @@
 					<div class="col-12 col-lg-12">
 						<div class="newsprk_nav stellarnav">
 							<ul id="newsprk_menu">
-								<li><a href="">Acceuil </i></a></li>
+								<li><a href="{{route('home')}}">Acceuil </i></a></li>
 								@foreach ($cat_header as $cat)
 									<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
 								@endforeach
-								<li><a href="contact.html">Boutique</a></li>
+								<li><a href="#">Boutique</a></li>
 							</ul>
 							
 						</div>
@@ -151,13 +151,11 @@
 						
 						<div class="social2">
 							<ul class="inline">
-								<li><a href="#"><i class="fab fa-instagram"></i></a>
+								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@else#@endif"><i class="fab fa-facebook-f"></i></a>
 								</li>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a>
+								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@else#@endif"><i class="fab fa-youtube"></i></a>
 								</li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a>
-								</li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a>
+								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->instagram}}@else#@endif"><i class="fab fa-instagram"></i></a>
 								</li>
 							</ul>
 						</div>
@@ -184,34 +182,22 @@
 								<div class="row">
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="#">Acceuil</a>
+											<li><a href="{{route('home')}}">Acceuil</a>
 											</li>
-											<li><a href="#">Culture</a>
-											</li>
-											<li><a href="#">Peche</a>
-											</li>
-											<li><a href="#">Elevage</a>
-											</li>
-											<li><a href="#">Environement</a>
-											</li>
-											
+											@foreach ($cat_header as $cat)
+											@if ($loop->index <= count($cat_header)/2 )
+												<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
+											@endif
+											@endforeach
 										</ul>
 									</div>
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="#">Enquette</a>
-											</li>
-											<li><a href="#">Agritech</a>
-											</li>
-											<li><a href="#">Tv</a>
-											</li>
-											<li><a href="#">Transformation</a>
-											</li>
-											<li><a href="#">Boutique</a>
-											</li>
-											<li><a href="#">Agritech</a>
-											</li>
-										
+											@foreach ($cat_header as $cat)
+											@if ($loop->index > count($cat_header)/2 )
+												<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
+											@endif
+											@endforeach
 										</ul>
 									</div>
 								</div>
@@ -223,29 +209,22 @@
 								<div class="row">
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="#">Acceuil</a>
+											<li><a href="{{route('home')}}">Acceuil</a>
 											</li>
-											<li><a href="#">Emission</a>
-											</li>
-											<li><a href="#">Decouverte</a>
-											</li>
-											<li><a href="#">Nos Marchés</a>
-											</li>
-											
-											
+											@foreach ($cat_header as $cat)
+											@if ($loop->index <= count($cat_header)/2 )
+												<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
+											@endif
+											@endforeach
 										</ul>
 									</div>
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="#">Gallerie photo</a>
-											</li>
-											<li><a href="#">Agenda</a>
-											</li>
-											<li><a href="#">Sante</a>
-											</li>
-											<li><a href="#">Nous suivre sur whatsapp</a>
-											</li>
-
+											@foreach ($cat_header as $cat)
+											@if ($loop->index > count($cat_header)/2 )
+												<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
+											@endif
+											@endforeach
 										</ul>
 									</div>
 								</div>
