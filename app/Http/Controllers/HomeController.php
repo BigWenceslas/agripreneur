@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use App\ArticlesTv;
 use App\CategoriesBasDePage;
 use App\SocialNetwork;
 use App\ALaUne;
@@ -22,8 +23,8 @@ class HomeController extends Controller
         //A la une
         $a_la_une = ALaUne::orderBy('id','desc')->first();
         if ($a_la_une) {
-            $article1_bloc1 = Article::find($a_la_une->article1_bloc1);
-            $article2_bloc1 = Article::find($a_la_une->article2_bloc1);
+            $article1_bloc1 = ArticlesTv::find($a_la_une->article1_bloc1);
+            $article2_bloc1 = ArticlesTv::find($a_la_une->article2_bloc1);
             $article1_bloc2 = Article::find($a_la_une->article1_bloc2);
             $article2_bloc2 = Article::find($a_la_une->article2_bloc2);
         }else{

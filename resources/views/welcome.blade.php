@@ -86,44 +86,38 @@
 			@if ($a_la_une)
 			<div class="col-lg-6 col-lg-8">
 				<h2 class="widget-title">{{$a_la_une->titre_bloc1}}</h2>
-				<div class="carousel_post2_type3 nav_style1 owl-carousel">
+				<div class="carousel_post2_type3 nav_style1 owl-carousel mb-4">
 					<!--CAROUSEL START-->
 					<div class="single_post post_type3">
 						<div class="post_img">
 							<div class="img_wrap">
 								<div class="video-responsive">
-								<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$article1_bloc1->video_youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$article1_bloc1->video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
 							</div>
-							{{-- <span class="tranding">
-								<i class="fas fa-bolt"></i>
-							</span> --}}
 						</div>
-						<div class="single_post_text">
+						{{-- <div class="single_post_text">
 							<div class="meta3">	<a href="{{route('article_par_categorie',['slug'=> $article1_bloc1->category->slug])}}">{{$article1_bloc1->category->nom}}</a>
 								<a href="#">{{$article1_bloc1->created_at->format('d M Y - H:i:s')}}</a>
 							</div>
 							<h4><a href="{{route('details_article',['slug'=> $article1_bloc1->slug])}}">{!!strip_tags($article1_bloc1->resume)!!}</a></h4>
 							
-						</div>
+						</div> --}}
 					</div>
 					<div class="single_post post_type3">
 						<div class="post_img">
 							<div class="img_wrap">
 								<div class="video-responsive">
-								<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$article2_bloc1->video_youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$article2_bloc1->video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
 							</div>
-							{{-- <span class="tranding">
-								<i class="fas fa-bolt"></i>
-							</span> --}}
 						</div>
-						<div class="single_post_text">
+						{{-- <div class="single_post_text">
 							<div class="meta3">	<a href="{{route('article_par_categorie',['slug'=> $article2_bloc1->category->slug])}}">{{$article2_bloc1->category->nom}}</a>
 								<a href="#">{{$article2_bloc1->created_at->format('d M Y - H:i:s')}}</a>
 							</div>
 							<h4><a href="{{route('details_article',['slug'=> $article2_bloc1->slug])}}">{!!strip_tags($article2_bloc1->resume)!!}</a></h4>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 				

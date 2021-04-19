@@ -14,12 +14,12 @@ class ALaUne extends Model
 
     public function article1_bloc1()
     {
-        return $this->belongsTo(Article::class,'article1_bloc1');
+        return $this->belongsTo(ArticlesTv::class,'article1_bloc1');
     }
 
     public function article2_bloc1()
     {
-        return $this->belongsTo(Article::class,'article2_bloc1');
+        return $this->belongsTo(ArticlesTv::class,'article2_bloc1');
     }
     public function article1_bloc2()
     {

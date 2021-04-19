@@ -37,7 +37,7 @@
 						<form action="{{route('recherche')}}" method="POST">
 							@csrf
 							<input type="search" name="search" placeholder="Faites une recherche ici...">
-							<button type="submit" class="cbtn1">Search</button>
+							<button type="submit" class="cbtn1">Recherche</button>
 						</form>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 							<li><a href="#">Gallerie photos</a></li>
 							<li><a href="#">Agenda</a></li>
 							<li><a href="#">Santé</a></li>
-							<li><a href="#">Suivre sur whatsapp</a></li>
+							<li><a href="#">Nous suivre sur Whatsapp</a></li>
                             <li class="search_btn"><i class="far fa-search"></i>
 						</ul>
 				
@@ -126,13 +126,11 @@
 					<div class="col-12 col-lg-12">
 						<div class="newsprk_nav stellarnav">
 							<ul id="newsprk_menu">
-								<li><a href="{{route('home')}}">Acceuil </i></a></li>
+								<li><a href="{{route('home')}}">Accueil</i></a></li>
 								@foreach ($cat_header as $cat)
 									<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
 								@endforeach
-								<li><a href="#">Boutique</a></li>
 							</ul>
-							
 						</div>
 						
 				</div>
@@ -208,11 +206,11 @@
 						</div>
 						<div class="col-sm-6 col-lg">
 							<div class="single_footer_nav">
-								<h3 class="widget-title2">Nos Categories</h3>
+								<h3 class="widget-title2">Nos Catégories</h3>
 								<div class="row">
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="{{route('home')}}">Acceuil</a>
+											<li><a href="{{route('home')}}">Accueil</a>
 											</li>
 											@foreach ($cat_header as $cat)
 											@if ($loop->index <= count($cat_header)/2 )
