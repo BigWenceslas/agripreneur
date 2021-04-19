@@ -35,7 +35,7 @@
 										<div class="post_img">
 											<div class="img_wrap">
 												<a href="#">
-													<img src="{{asset('storage/'.$item->image)}}" alt="{{$item->nom}}">
+													<img src="{{asset('storage/'.$item->image)}}" alt="{{$item->nom}}" loading="lazy">
 												</a>
 											</div>
 										</div>
@@ -46,7 +46,7 @@
 											</div>
 											<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>
 											<div class="space-10"></div>
-											<p class="post-p">{{Str::limit(strip_tags($item->contenu), 100, '...')}}</p>
+											<p class="post-p">{!!Str::limit(strip_tags($item->contenu), 100, '...')!!}</p>
 										</div>
 									</div>
 								</div>
@@ -76,7 +76,7 @@
 										<div class="post_img">
 											<div class="img_wrap">
 												<a href="#">
-													<img src="{{asset('storage/'. $item->image)}}" alt="{{$item->image}}">
+													<img src="{{asset('storage/'. $item->image)}}" alt="{{$item->image}}" loading="lazy">
 												</a>
 											</div>
 										</div>
@@ -103,10 +103,14 @@
 						<div class="carousel_post_type3 nav_style1 owl-carousel">
 							<div class="single_post post_type3">
 								<div class="post_img">
-									<img src="{{asset('assets/img/bg/video4.jpg')}}" alt="">
-									<span class="tranding">
+									@if ($espace_publicitaire)
+										<img src="{{asset('storage/'. $espace_publicitaire->image_categorie)}}" loading="lazy" alt="">
+									@else
+										<img src="{{asset('assets/img/bg/video4.jpg')}}" loading="lazy" alt="">
+									@endif
+									{{-- <span class="tranding">
 										<i class="fas fa-bolt"></i>
-									</span>
+									</span> --}}
 								</div>
 							
 							</div>
@@ -116,7 +120,7 @@
 				
 					
 					<!--:::::: POST TYPE 4 END :::::::-->
-					<div class="box widget news_letter mb30">
+					{{-- <div class="box widget news_letter mb30">
 						<h2 class="widget-title">News Letter</h2>
 						<p>Your email address will not be this published. Required fields are News Today.</p>
 						<div class="space-20"></div>
@@ -128,7 +132,7 @@
 							<div class="space-10"></div>
 							<p>We hate spam as much as you do</p>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>

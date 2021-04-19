@@ -4,7 +4,7 @@
 
 @section('content_body')
 	<!--::::: POST GALLARY AREA START :::::::-->
-	<div class="post_gallary_area fifth_bg mb40">
+	<div class="post_gallary_area fifth_bg mb41">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -14,7 +14,7 @@
 								@if ($a_la_une)
 								<div class="single_post post_type6 xs-mb30">
 									<div class="post_img gradient1">
-										<img src="{{'storage/'. $a_la_une->article_a_la_une->image}}" alt="{{$a_la_une->article_a_la_une->nom}}">
+										<img src="{{'storage/'. $a_la_une->article_a_la_une->image}}" alt="{{$a_la_une->article_a_la_une->nom}}" loading="lazy">
 										{{-- <span class="tranding">
 											<i class="fas fa-play"></i>
 										</span> --}}
@@ -23,9 +23,9 @@
 										<div class="meta meta_separator1"><a href="{{route('article_par_categorie',['slug'=> $a_la_une->article_a_la_une->slug])}}">{{$a_la_une->article_a_la_une->category->nom}}</a>
 											<a href="#">{{$a_la_une->article_a_la_une->created_at->format('d M Y - H:i:s')}}</a>
 										</div>
-										<h4><a class="play_btn" href="video_post1.html">{{$a_la_une->article_a_la_une->nom}}</a></h4>
+										<h4><a class="play_btn" href="#">{{$a_la_une->article_a_la_une->nom}}</a></h4>
 										<div class="space-10"></div>
-										<p class="post-p">{!!$a_la_une->article_a_la_une->resume!!}</p>
+										<p class="post-p">{!!strip_tags($a_la_une->article_a_la_une->resume)!!}</p>
 									</div>
 								</div>
 								@endif
@@ -47,7 +47,7 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="heading">
-						<h2 class="widget-title">{{$articles_mois->titre_bloc}}</h2>
+						<h2 class="widget-title">{{$articles_mois->tire_bloc}}</h2>
 					</div>
 				</div>
 			</div>
@@ -59,7 +59,7 @@
 						<div class="single_post post_type6 post_type7">
 							<div class="post_img gradient1">
 								<a href="{{route('details_article',['slug'=> $item->slug])}}">
-									<img src="{{'storage/'. $item->image}}" alt="{{$item->nom}}">
+									<img src="{{'storage/'. $item->image}}" alt="{{$item->nom}}" loading="lazy">
 								</a>
 							</div>
 							<div class="single_post_text">
@@ -103,7 +103,7 @@
 							<div class="meta3">	<a href="{{route('article_par_categorie',['slug'=> $article1_bloc1->category->slug])}}">{{$article1_bloc1->category->nom}}</a>
 								<a href="#">{{$article1_bloc1->created_at->format('d M Y - H:i:s')}}</a>
 							</div>
-							<h4><a href="{{route('details_article',['slug'=> $article1_bloc1->slug])}}">{!!$article1_bloc1->resume!!}</a></h4>
+							<h4><a href="{{route('details_article',['slug'=> $article1_bloc1->slug])}}">{!!strip_tags($article1_bloc1->resume)!!}</a></h4>
 							
 						</div>
 					</div>
@@ -122,7 +122,7 @@
 							<div class="meta3">	<a href="{{route('article_par_categorie',['slug'=> $article2_bloc1->category->slug])}}">{{$article2_bloc1->category->nom}}</a>
 								<a href="#">{{$article2_bloc1->created_at->format('d M Y - H:i:s')}}</a>
 							</div>
-							<h4><a href="{{route('details_article',['slug'=> $article2_bloc1->slug])}}">{!!$article1_bloc2->resume!!}</a></h4>
+							<h4><a href="{{route('details_article',['slug'=> $article2_bloc1->slug])}}">{!!strip_tags($article2_bloc1->resume)!!}</a></h4>
 						</div>
 					</div>
 				</div>
@@ -143,13 +143,13 @@
 									<div class="post_img">
 										<div class="img_wrap">
 											<a href="#">
-												<img src="{{'storage/'. $article1_bloc2->image}}" alt="{{$article1_bloc2->nom}}">
+												<img src="{{'storage/'. $article1_bloc2->image}}" alt="{{$article1_bloc2->nom}}" loading="lazy">
 											</a>
 										</div>
 									</div>
 									<div class="single_post_text">
 										<div class="meta3">
-											<a href="{{route('article_par_categorie',['slug'=> $article1_bloc2->category->slug])}}">{{$article1_bloc2->nom}}</a>
+											<a href="{{route('article_par_categorie',['slug'=> $article1_bloc2->category->slug])}}">{{$article1_bloc2->category->nom}}</a>
 											<a href="#">{{$article1_bloc2->created_at->format('d M Y - H:i:s')}}</a>
 										</div>
 										<h4><a href="{{route('details_article',['slug'=> $article1_bloc2->slug])}}">{{$article1_bloc2->nom}}</a></h4>
@@ -162,13 +162,13 @@
 									<div class="post_img">
 										<div class="img_wrap">
 											<a href="#">
-												<img src="{{'storage/'. $article2_bloc2->image}}" alt="{{$article2_bloc2->nom}}">
+												<img src="{{'storage/'. $article2_bloc2->image}}" alt="{{$article2_bloc2->nom}}" loading="lazy">
 											</a>
 										</div>
 									</div>
 									<div class="single_post_text">
 										<div class="meta3">
-											<a href="{{route('article_par_categorie',['slug'=> $article2_bloc2->category->slug])}}">{{$article2_bloc2->nom}}</a>
+											<a href="{{route('article_par_categorie',['slug'=> $article2_bloc2->category->slug])}}">{{$article2_bloc2->category->nom}}</a>
 											<a href="#">{{$article2_bloc2->created_at->format('d M Y - H:i:s')}}</a>
 										</div>
 										<h4><a href="{{route('details_article',['slug'=> $article2_bloc2->slug])}}">{{$article2_bloc2->nom}}</a></h4>
@@ -196,7 +196,7 @@
 							<div class="single_post widgets_small type8">
 								<div class="post_img">
 									<div class="img_wrap">
-										<img src="{{'storage/' . $articles_recents[6*$i+$l]->image}}" alt="{{$articles_recents[6*$i+$l]->nom}}">
+										<img src="{{'storage/' . $articles_recents[6*$i+$l]->image}}" alt="{{$articles_recents[6*$i+$l]->nom}}" loading="lazy">
 									</div>
 									{{-- <span class="tranding">
 										<i class="fas fa-bolt"></i>
@@ -232,6 +232,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
+					@if ($cat_bas_page->bas_bloc1)
 					<div class="col-12">
 						<div class="heading">
 							<h2 class="widget-title">{{$cat_bas_page->bas_bloc1->nom}}</h2>
@@ -241,7 +242,7 @@
 					<div class="single_post widgets_small">
 						<div class="post_img">
 							<div class="img_wrap">
-								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}">
+								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}" loading="lazy">
 							</div>
 							{{-- <span class="tranding">
 								<i class="fas fa-bolt"></i>
@@ -258,9 +259,11 @@
 					<div class="border_black"></div>
 					<div class="space-15"></div>
 					@endforeach
+					@endif
 				</div>
 
 				<div class="col-lg-4">
+					@if ($cat_bas_page->bas_bloc2)
 					<div class="col-12">
 						<div class="heading">
 							<h2 class="widget-title">{{$cat_bas_page->bas_bloc2->nom}}</h2>
@@ -270,7 +273,7 @@
 					<div class="single_post widgets_small">
 						<div class="post_img">
 							<div class="img_wrap">
-								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}">
+								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}" loading="lazy">
 							</div>
 							{{-- <span class="tranding">
 								<i class="fas fa-bolt"></i>
@@ -287,8 +290,10 @@
 					<div class="border_black"></div>
 					<div class="space-15"></div>
 					@endforeach
+					@endif
 				</div>
 				<div class="col-lg-4">
+					@if ($cat_bas_page->bas_bloc3)
 					<div class="col-12">
 						<div class="heading">
 							<h2 class="widget-title">{{$cat_bas_page->bas_bloc3->nom}}</h2>
@@ -298,7 +303,7 @@
 					<div class="single_post widgets_small">
 						<div class="post_img">
 							<div class="img_wrap">
-								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}">
+								<img src="{{'storage/' . $item->image}}" alt="{{$item->nom}}" loading="lazy">
 							</div>
 							{{-- <span class="tranding">
 								<i class="fas fa-bolt"></i>
@@ -315,6 +320,7 @@
 					<div class="border_black"></div>
 					<div class="space-15"></div>
 					@endforeach
+					@endif
 				</div>
 			</div>
 		</div>

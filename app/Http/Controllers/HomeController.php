@@ -31,8 +31,9 @@ class HomeController extends Controller
         }
         //Agripreneur du mois
         $articles_mois = AgripreneurDuMoi::orderBy('id','desc')->first();
+        //dd($articles_mois);
         //Articles populaire
-        $articles_populaires = Article::where([['publier','=',1]])->orderBy('vues','desc')->take(12)->get();
+        $articles_populaires = Article::where([['publier','=',1]])->orderBy('vues','desc')->take(5)->get();
         //Categories bas de page
         $cat_bas_page = CategoriesBasDePage::orderBy('id','desc')->first();
         $bas_bloc1=[];$bas_bloc2=[];$bas_bloc3=[];

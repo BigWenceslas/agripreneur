@@ -14,7 +14,7 @@
 						<h3>{{$article->nom}}</h3>
 						<div class="space-10"></div>
 					</div>
-					<img src="{{asset('storage/'.$article->image)}}" alt="{{$article->nom}}">
+					<img src="{{asset('storage/'.$article->image)}}" alt="{{$article->nom}}" loading="lazy">
 					<div class="space-20"></div>
 					<div class="row">
 						<div class="col-lg-6 align-self-center">
@@ -22,7 +22,7 @@
 								<div class="author_img">
 									<div class="author_img_wrap">
 										<img src="@if($article->auteur){{asset('storage/'.$article->auteur->avatar)}}@else {{asset('assets/img/author/author2.png')}}@endif" 
-										alt="@if($article->auteur){{$article->auteur->name}}@endif">
+										alt="@if($article->auteur){{$article->auteur->name}}@endif" loading="lazy">
 									</div>
 								</div>
 									<a href="#">@if($article->auteur){{$article->auteur->name}}@endif</a>
@@ -64,7 +64,7 @@
 										<div class="post_img">
 											<div class="img_wrap">
 												<a href="#">
-													<img src="{{asset('storage/'. $item->image)}}" alt="{{$item->image}}">
+													<img src="{{asset('storage/'. $item->image)}}" alt="{{$item->image}}" loading="lazy">
 												</a>
 											</div>
 										</div>
@@ -91,7 +91,11 @@
 						<div class="carousel_post_type3 nav_style1 owl-carousel">
 							<div class="single_post post_type3">
 								<div class="post_img">
-									<img src="{{asset('assets/img/bg/video4.jpg')}}" alt="">
+									@if ($espace_publicitaire)
+										<img src="{{asset('storage/'. $espace_publicitaire->image_article)}}" alt="" loading="lazy">
+									@else
+										<img src="{{asset('assets/img/bg/video4.jpg')}}" alt="" loading="lazy">
+									@endif
 									{{-- <span class="tranding">
 										<i class="fas fa-bolt"></i>
 									</span> --}}
@@ -101,10 +105,9 @@
 						
 						</div>
 					</div>
-				
 					
 					<!--:::::: POST TYPE 4 END :::::::-->
-					<div class="box widget news_letter mb30">
+					{{-- <div class="box widget news_letter mb30">
 						<h2 class="widget-title">News Letter</h2>
 						<p>Your email address will not be this published. Required fields are News Today.</p>
 						<div class="space-20"></div>
@@ -116,7 +119,7 @@
 							<div class="space-10"></div>
 							<p>We hate spam as much as you do</p>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>

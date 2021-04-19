@@ -21,11 +21,11 @@
 </head>
 <body class="theme-1">
         <!--::::: PRELOADER START :::::::-->
-	<div class="preloader">
+	{{-- <div class="preloader">
 		<div>
 			<div class="nb-spinner"></div>
 		</div>
-	</div>
+	</div> --}}
 	<!--::::: PRELOADER END :::::::-->
 
 	<!--::::: SEARCH FORM START:::::::-->
@@ -56,13 +56,16 @@
 				<div class="col-8 col-lg-8">
 					<div class="newsprk_nav stellarnav">
 						<ul id="newsprk_menu">
-							<li><a href="#">Emission </i></a></li>
-							<li><a href="#">Decouverte</i></a></li>
-							<li><a href="#">Nos marchés</i></a></li>
-							<li><a href="#">Gallerie Photo</i></a></li>
-							<li><a href="#world">Agenda</a></li>
-							<li><a href="#sports">Sante</a></li>
-							<li><a href="contact.html">Nous suivent sur whatsapp</a></li>
+							{{-- @foreach ($cat_header as $cat)
+								<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
+							@endforeach --}}
+							<li><a href="#">Emission</a></li>
+							<li><a href="#">Découverte</a></li>
+							<li><a href="#">Nos marchés</a></li>
+							<li><a href="#">Gallerie photos</a></li>
+							<li><a href="#">Agenda</a></li>
+							<li><a href="#">Santé</a></li>
+							<li><a href="#">Suivre sur whatsapp</a></li>
                             <li class="search_btn"><i class="far fa-search"></i>
 						</ul>
 				
@@ -99,14 +102,14 @@
 				<div class="col-lg-4 align-self-center">
 					<div class="logo">
 						<a href="{{route('home')}}">
-							<img src="{{asset('assets/img/agri.jpg')}}" alt="image">
+							<img src="{{asset('assets/img/agri.jpg')}}" loading="lazy" alt="image">
 						</a>
 					</div>
 				</div>
 				<div class="col-lg-8 align-self-center">
 					<div class="banner1">
 						<a href="#">
-							<img src="{{asset('assets/img/banderole3.jpg')}}" alt="">
+							<img src="{{asset('assets/img/banderole3.jpg')}}" loading="lazy" alt="">
 						</a>
 					</div>
 				</div>
