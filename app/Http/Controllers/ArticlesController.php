@@ -5,12 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use App\ArticlesTv;
 use App\CategoriesBasDePage;
 use App\SocialNetwork;
 use App\ALaUne;
 use App\AgripreneurDuMoi;
 use App\EspacePublicitaire;
 use App\Models\User;
+use App\Menu1Site;
+use App\Menu2Site;
 
 class ArticlesController extends Controller
 {
@@ -32,8 +35,12 @@ class ArticlesController extends Controller
     $espace_publicitaire =  EspacePublicitaire::where([['publier','=',1]])->orderBy('id','desc')->first();
     $article->vues = $article->vues + 1;
     $article->save();
+    //Menus
+    $menu1 = Menu1Site::orderBy('id','desc')->first();
+    $menu2 = Menu2Site::orderBy('id','desc')->first();
+
     return view('article.details')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
-    'articles_populaires'=>$articles_populaires,'article' => $article,'espace_publicitaire'=>$espace_publicitaire]);
+    'articles_populaires'=>$articles_populaires,'article' => $article,'espace_publicitaire'=>$espace_publicitaire, 'menu1' => $menu1, 'menu2' => $menu2]);
     }
 
    public function liste_par_categorie($slug){
@@ -47,10 +54,24 @@ class ArticlesController extends Controller
     $categorie = Category::where('slug',$slug)->first();
     //Espace publicitaire
     $espace_publicitaire =  EspacePublicitaire::where([['publier','=',1]])->orderBy('id','desc')->first();
+    //Menus
+    $menu1 = Menu1Site::orderBy('id','desc')->first();
+    $menu2 = Menu2Site::orderBy('id','desc')->first();
     //Liste des articles
-    $articles=Article::orderBy('vues','desc')->where([['categorie_id','=',$categorie->id]])->paginate(8);
-    return view('article.liste_par_categorie')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
-    'articles_populaires'=>$articles_populaires,'categorie'=>$categorie,'articles'=>$articles,'espace_publicitaire'=>$espace_publicitaire]);
+    if ($slug == 'tv') {
+        $articles=ArticlesTv::orderBy('created_at','desc')->paginate(8);
+    
+        return view('article.liste_par_categorie_tv')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
+        'articles_populaires'=>$articles_populaires,'categorie'=>$categorie,'articles'=>$articles,'espace_publicitaire'=>$espace_publicitaire,
+        'menu1' => $menu1, 'menu2' => $menu2]);
+    } else {
+        $articles=Article::orderBy('vues','desc')->where([['categorie_id','=',$categorie->id]])->paginate(8);
+            
+        return view('article.liste_par_categorie')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
+        'articles_populaires'=>$articles_populaires,'categorie'=>$categorie,'articles'=>$articles,'espace_publicitaire'=>$espace_publicitaire,
+        'menu1' => $menu1, 'menu2' => $menu2]);
+    }
+
    }
 
    

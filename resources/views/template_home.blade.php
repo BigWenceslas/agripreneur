@@ -59,13 +59,32 @@
 							{{-- @foreach ($cat_header as $cat)
 								<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
 							@endforeach --}}
-							<li><a href="#">Emission</a></li>
-							<li><a href="#">Découverte</a></li>
-							<li><a href="#">Nos marchés</a></li>
-							<li><a href="#">Gallerie photos</a></li>
-							<li><a href="#">Agenda</a></li>
-							<li><a href="#">Santé</a></li>
-							<li><a href="#">Nous suivre sur Whatsapp</a></li>
+							@if ($menu1)
+									@if ($menu1->getCategorie_1)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu1->getCategorie_1->slug])}}">{{$menu1->getCategorie_1->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu1->getCategorie_2)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu1->getCategorie_2->slug])}}">{{$menu1->getCategorie_2->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu1->getCategorie_3)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu1->getCategorie_3->slug])}}">{{$menu1->getCategorie_3->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu1->getCategorie_4)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu1->getCategorie_4->slug])}}">{{$menu1->getCategorie_4->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu1->getCategorie_5)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu1->getCategorie_5->slug])}}">{{$menu1->getCategorie_5->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu1->getCategorie_6)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu1->getCategorie_6->slug])}}">{{$menu1->getCategorie_6->nom}}</i></a></li>
+									@endif
+								@endif
+							<li><a target="_blank" href="whatsapp://send?abid=+237656801098&text=Bonjour">Nous suivre sur Whatsapp</a></li>
                             <li class="search_btn"><i class="far fa-search"></i>
 						</ul>
 				
@@ -77,11 +96,11 @@
 					
 						<div class="social1">
 							<ul class="inline">
-								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->twitter}}@endif"><i class="fab fa-twitter"></i></a>
+								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->twitter}}@endif"><i class="fab fa-twitter"></i></a>
 								</li>
-								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><i class="fab fa-facebook-f"></i></a>
+								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><i class="fab fa-facebook-f"></i></a>
 								</li>
-								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><i class="fab fa-youtube"></i></a>
+								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><i class="fab fa-youtube"></i></a>
 								</li>
 								
 							</ul>
@@ -127,9 +146,49 @@
 						<div class="newsprk_nav stellarnav">
 							<ul id="newsprk_menu">
 								<li><a href="{{route('home')}}">Accueil</i></a></li>
-								@foreach ($cat_header as $cat)
-									<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
-								@endforeach
+								@if ($menu2)
+									@if ($menu2->getCategorie_1)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_1->slug])}}">{{$menu2->getCategorie_1->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu2->getCategorie_2)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_2->slug])}}">{{$menu2->getCategorie_2->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu2->getCategorie_3)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_3->slug])}}">{{$menu2->getCategorie_3->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu2->getCategorie_4)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_4->slug])}}">{{$menu2->getCategorie_4->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu2->getCategorie_5)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_5->slug])}}">{{$menu2->getCategorie_5->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu2->getCategorie_6)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_6->slug])}}">{{$menu2->getCategorie_6->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu2->getCategorie_7)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_7->slug])}}">{{$menu2->getCategorie_7->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu2->getCategorie_8)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_8->slug])}}">{{$menu2->getCategorie_8->nom}}</i></a></li>
+									@endif
+									
+									@if ($menu2->getCategorie_9)
+									<li><a href="{{route('article_par_categorie',['slug'=>$menu2->getCategorie_9->slug])}}">{{$menu2->getCategorie_9->nom}}</i></a></li>
+									@endif
+									
+									<li><a href="{{route('article_par_categorie',['slug'=>'tv'])}}">TV</i></a></li>
+								@else
+									@foreach ($cat_header as $cat)
+										<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
+									@endforeach
+								@endif
 							</ul>
 						</div>
 						
@@ -152,23 +211,23 @@
 						
 						<div class="social2">
 							<ul class="inline">
-								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@else#@endif"><i class="fab fa-facebook-f"></i></a>
+								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@else#@endif"><i class="fab fa-facebook-f"></i></a>
 								</li>
-								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@else#@endif"><i class="fab fa-youtube"></i></a>
+								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@else#@endif"><i class="fab fa-youtube"></i></a>
 								</li>
-								<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->instagram}}@else#@endif"><i class="fab fa-instagram"></i></a>
+								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->instagram}}@else#@endif"><i class="fab fa-instagram"></i></a>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-4 offset-lg-2 align-self-center">
-						<div class="signup_form">
+						{{-- <div class="signup_form">
 							<form action="index.html" method="post">
 								<input class="signup" type="email" placeholder="Your email address">
 								<input type="button" class="cbtn" value="sign up">
 							</form>
 							<p>We hate spam as much as you do</p>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>

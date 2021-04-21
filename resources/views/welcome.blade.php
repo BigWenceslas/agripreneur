@@ -185,25 +185,25 @@
 						<!--CAROUSEL START-->
 						@for ($i = 0; $i < $page_articles_recents; $i++)
 						<div class="single_post2_carousel">
-							@for ($l = 0; $l < 6; $l++)
-							@if (isset($articles_recents[6*$i+$l]))
+							@for ($l = 0; $l <= 3; $l++)
+							@if (isset($articles_recents[4*$i+$l]))
 							<div class="single_post widgets_small type8">
 								<div class="post_img">
 									<div class="img_wrap">
-										<img src="{{'storage/' . $articles_recents[6*$i+$l]->image}}" alt="{{$articles_recents[6*$i+$l]->nom}}" loading="lazy">
+										<img src="{{'storage/' . $articles_recents[4*$i+$l]->image}}" alt="{{$articles_recents[4*$i+$l]->nom}}" loading="lazy">
 									</div>
-									{{-- <span class="tranding">
-										<i class="fas fa-bolt"></i>
-									</span> --}}
 								</div>
 								<div class="single_post_text">
-									<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $articles_recents[6*$i+$l]->slug])}}">{{$articles_recents[6*$i+$l]->category->nom}}</a>
-										<a href="{{route('details_article',['slug'=> $articles_recents[6*$i+$l]->slug])}}">{{$articles_recents[6*$i+$l]->created_at->format('d M Y - H:i:s')}}</a>
+									<div class="meta2">
+										@if ($articles_recents[4*$i+$l]->category)
+										<a href="{{route('article_par_categorie',['slug'=> $articles_recents[4*$i+$l]->category->slug])}}">{{$articles_recents[4*$i+$l]->category->nom}}</a>
+										@endif
+										<a href="{{route('details_article',['slug'=> $articles_recents[4*$i+$l]->slug])}}">@if ($articles_recents[4*$i+$l]->created_at){{$articles_recents[4*$i+$l]->created_at->format('d M Y - H:i:s')}}@endif</a>
 									</div>
-									<h4><a href="{{route('details_article',['slug'=> $articles_recents[6*$i+$l]->slug])}}">{{$articles_recents[6*$i+$l]->nom}}</a></h4>
+									<h4><a href="{{route('details_article',['slug'=> $articles_recents[4*$i+$l]->slug])}}">{{$articles_recents[4*$i+$l]->nom}}</a></h4>
 								</div>
 								<div class="type8_count">
-									<h2>{{6*$i+$l+1}}</h2>
+									<h2>{{4*$i+$l+1}}</h2>
 								</div>
 							</div>
 							<div class="space-15"></div>
@@ -277,7 +277,7 @@
 							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
 								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
 							</div>
-							<h4><a href="post1.html">{{$item->nom}}</a></h4>
+							<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>
 						</div>
 					</div>
 					<div class="space-15"></div>
@@ -307,7 +307,7 @@
 							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
 								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
 							</div>
-							<h4><a href="post1.html">{{$item->nom}}</a></h4>
+							<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>
 						</div>
 					</div>
 					<div class="space-15"></div>

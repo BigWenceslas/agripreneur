@@ -19,7 +19,7 @@
 						<div class="row">
 							<div class="col-12 align-self-center">
 								<div class="categories_title">
-									<h5>CATEGORIE: {{$categorie->nom}}</h5>
+									<h5>CATEGORIE: TV</h5>
 								</div>
 							</div>
 						</div>
@@ -29,24 +29,23 @@
 						<div class="entertrainment_item">
 							<div class="row justify-content-center">
 								@foreach ($articles as $item)
-									
 								<div class="col-lg-6">
 									<div class="single_post post_type3 mb30">
 										<div class="post_img">
 											<div class="img_wrap">
-												<a href="#">
-													<img src="{{asset('storage/'.$item->image)}}" alt="{{$item->nom}}" loading="lazy">
-												</a>
+												<div class="video-responsive">
+													<iframe width="560" height="400" src="{{'https://www.youtube.com/embed/'.$item->video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+												</div>
 											</div>
 										</div>
 										<div class="single_post_text">
-											<div class="meta3">
+											{{-- <div class="meta3">
 												<a href="{{route('article_par_categorie',['slug'=> $categorie->slug])}}">{{$categorie->nom}}</a>
 												<a href="#">{{$item->created_at->format('d-M-Y H:i:s')}}</a>
-											</div>
-											<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>
+											</div> --}}
+											{{-- <h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4> --}}
 											<div class="space-10"></div>
-											<p class="post-p">{!!Str::limit(strip_tags($item->contenu), 100, '...')!!}</p>
+											{{-- <p class="post-p">{!!Str::limit(strip_tags($item->contenu), 100, '...')!!}</p> --}}
 										</div>
 									</div>
 								</div>

@@ -10,16 +10,18 @@ use App\CategoriesBasDePage;
 use App\SocialNetwork;
 use App\ALaUne;
 use App\AgripreneurDuMoi;
+use App\Menu1Site;
+use App\Menu2Site;
 
 class HomeController extends Controller
 {
     public function homepage(){
         //Categorie header
         $cat_header = Category::orderBy('nom','asc')->get();
-
         //articles recents;
-        $articles_recents = Article::where([['publier','=',1]])->orderBy('created_at','desc')->take(5)->get();
-        $page_articles_recents = 2;
+        $articles_recents = Article::where([['publier','=',1]])->orderBy('created_at','desc')->get();
+        $page_articles_recents = 20;
+        //dd($articles_recents);
         //A la une
         $a_la_une = ALaUne::orderBy('id','desc')->first();
         if ($a_la_une) {
@@ -45,12 +47,15 @@ class HomeController extends Controller
         }
         //Reseaux sociaux
         $reseaux_sociaux = SocialNetwork::orderBy('id','desc')->first();
+        //Menus
+        $menu1 = Menu1Site::orderBy('id','desc')->first();
+        $menu2 = Menu2Site::orderBy('id','desc')->first();
         //dd($a_la_une);
         return view('welcome')->with(['cat_header' => $cat_header,'reseaux_sociaux' => $reseaux_sociaux,
         'bas_bloc1'=>$bas_bloc1,'bas_bloc2'=>$bas_bloc2,'bas_bloc3'=>$bas_bloc3,'cat_bas_page'=>$cat_bas_page,
         'articles_populaires'=>$articles_populaires,'articles_recents' => $articles_recents,
         'page_articles_recents'=> $page_articles_recents,'a_la_une'=> $a_la_une,'article1_bloc1'=> $article1_bloc1,
         'article2_bloc1'=> $article2_bloc1,'article1_bloc2'=> $article1_bloc2,'article2_bloc2'=> $article2_bloc2,
-        'articles_mois' => $articles_mois]);
+        'articles_mois' => $articles_mois, 'menu1' => $menu1, 'menu2' => $menu2]);
     }
 }
