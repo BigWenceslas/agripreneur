@@ -36,11 +36,11 @@
 						<div class="col-lg-6 align-self-center">
 							<div class="author_social inline text-right">
 								<ul>
-									<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->instagram}}@endif"><i class="fab fa-instagram"></i></a>
+									<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->instagram}}@endif"><i class="fab fa-instagram"></i></a>
 									</li>
-									<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><i class="fab fa-facebook-f"></i></a>
+									<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><i class="fab fa-facebook-f"></i></a>
 									</li>
-									<li><a href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><i class="fab fa-youtube"></i></a>
+									<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><i class="fab fa-youtube"></i></a>
 									</li>
 								</ul>
 							</div>
