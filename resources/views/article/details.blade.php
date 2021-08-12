@@ -69,8 +69,8 @@
 											</div>
 										</div>
 										<div class="single_post_text">
-											<div class="meta2 meta_separator1">	<a href="@if ($item->category){{route('article_par_categorie',['slug'=> $item->category->slug])}}@endif">@if ($item->category){{$item->category->nom}}@endif</a>
-												<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+											<div class="meta2 meta_separator1">
+												<a href="@if ($item->category){{route('article_par_categorie',['slug'=> $item->category->slug])}}@endif">@if ($item->category){{$item->category->nom}}@endif</a>
 											</div>
 											<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{Str::limit($item->nom, 50, '...')}}</a></h4>
 										</div>
