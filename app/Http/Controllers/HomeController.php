@@ -51,7 +51,7 @@ class HomeController extends Controller
         //Menus
         $menu1 = Menu1Site::orderBy('id','desc')->first();
         $menu2 = Menu2Site::orderBy('id','desc')->first();
-        //dd($a_la_une);
+        //dd($a_la_une->article_a_la_une);
         return view('welcome')->with(['cat_header' => $cat_header,'reseaux_sociaux' => $reseaux_sociaux,
         'bas_bloc1'=>$bas_bloc1,'bas_bloc2'=>$bas_bloc2,'bas_bloc3'=>$bas_bloc3,'cat_bas_page'=>$cat_bas_page,
         'articles_populaires'=>$articles_populaires,'articles_recents' => $articles_recents,

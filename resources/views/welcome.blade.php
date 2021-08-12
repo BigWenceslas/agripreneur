@@ -25,7 +25,11 @@
 											{{--<a href="#"> {{$a_la_une->article_a_la_une->created_at->format('d-m-Y - H:i:s')}} </a>--}}
 										</div>
 										<h4>
-											<a class="play_btn" href="#">{{$a_la_une->article_a_la_une->nom}}</a>
+											@if ($a_la_une->article_a_la_une->video_youtube)
+												<a class="play_btn" href="#">{{$a_la_une->article_a_la_une->nom}}</a>
+											@else
+												<a href="{{route('details_article',['slug'=> $a_la_une->article_a_la_une->slug])}}">{{$a_la_une->article_a_la_une->nom}}</a>
+											@endif
 										</h4>
 										<div class="space-10"></div>
 										<p class="post-p">{!!strip_tags($a_la_une->article_a_la_une->resume)!!}</p>
