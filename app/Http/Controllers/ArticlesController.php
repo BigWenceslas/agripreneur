@@ -28,9 +28,9 @@ class ArticlesController extends Controller
     //Categorie header
     $cat_header = Category::orderBy('nom','asc')->get();
     //Articles populaire
-    $articles_populaires = Article::where([['publier','=',1]])->orderBy('vues','desc')->take(5)->get();
+    $articles_populaires = Article::has('category')->where([['publier','=',1]])->orderBy('vues','desc')->take(5)->get();
     //Details Article
-    $article = Article::where('slug',$slug)->first();
+    $article = Article::has('category')->where('slug',$slug)->first();
     //Espace publicitaire
     $espace_publicitaire =  EspacePublicitaire::where([['publier','=',1]])->orderBy('id','desc')->first();
     $article->vues = $article->vues + 1;
@@ -49,7 +49,7 @@ class ArticlesController extends Controller
     //Categorie header
     $cat_header = Category::orderBy('nom','asc')->get();
     //Articles populaire
-    $articles_populaires = Article::where([['publier','=',1]])->orderBy('vues','desc')->take(5)->get();
+    $articles_populaires = Article::has('category')->where([['publier','=',1]])->orderBy('vues','desc')->take(5)->get();
     //Details Article
     $categorie = Category::where('slug',$slug)->first();
     //Espace publicitaire
@@ -65,7 +65,7 @@ class ArticlesController extends Controller
         'articles_populaires'=>$articles_populaires,'categorie'=>$categorie,'articles'=>$articles,'espace_publicitaire'=>$espace_publicitaire,
         'menu1' => $menu1, 'menu2' => $menu2]);
     } else {
-        $articles=Article::orderBy('vues','desc')->where([['categorie_id','=',$categorie->id]])->paginate(8);
+        $articles=Article::has('category')->orderBy('vues','desc')->where([['categorie_id','=',$categorie->id]])->paginate(8);
             
         return view('article.liste_par_categorie')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
         'articles_populaires'=>$articles_populaires,'categorie'=>$categorie,'articles'=>$articles,'espace_publicitaire'=>$espace_publicitaire,

@@ -19,8 +19,9 @@ class HomeController extends Controller
         //Categorie header
         $cat_header = Category::orderBy('nom','asc')->get();
         //articles recents;
-        $articles_recents = Article::where([['publier','=',1]])->orderBy('created_at','desc')->get();
-        $page_articles_recents = 20;
+        $articles_recents = Article::where([['publier','=',1]])->orderBy('created_at','desc')
+        ->limit(4)->get();
+        $page_articles_recents = 4;
         //dd($articles_recents);
         //A la une
         $a_la_une = ALaUne::orderBy('id','desc')->first();
@@ -36,14 +37,14 @@ class HomeController extends Controller
         $articles_mois = AgripreneurDuMoi::orderBy('id','desc')->first();
         //dd($articles_mois);
         //Articles populaire
-        $articles_populaires = Article::where([['publier','=',1]])->orderBy('vues','desc')->take(5)->get();
+        $articles_populaires = Article::has('category')->where([['publier','=',1]])->orderBy('vues','desc')->take(5)->get();
         //Categories bas de page
         $cat_bas_page = CategoriesBasDePage::orderBy('id','desc')->first();
         $bas_bloc1=[];$bas_bloc2=[];$bas_bloc3=[];
         if ($cat_bas_page) {
-           $bas_bloc1 = Article::where([['categorie_id','=',$cat_bas_page->categorie1],['publier','=',1]])->orderBy('created_at','desc')->take(3)->get();
-           $bas_bloc2 = Article::where([['categorie_id',$cat_bas_page->categorie2],['publier','=',1]])->orderBy('created_at','desc')->take(3)->get();
-           $bas_bloc3 = Article::where([['categorie_id',$cat_bas_page->categorie3],['publier','=',1]])->orderBy('created_at','desc')->take(3)->get();
+           $bas_bloc1 = Article::has('category')->where([['categorie_id','=',$cat_bas_page->categorie1],['publier','=',1]])->orderBy('created_at','desc')->take(3)->get();
+           $bas_bloc2 = Article::has('category')->where([['categorie_id',$cat_bas_page->categorie2],['publier','=',1]])->orderBy('created_at','desc')->take(3)->get();
+           $bas_bloc3 = Article::has('category')->where([['categorie_id',$cat_bas_page->categorie3],['publier','=',1]])->orderBy('created_at','desc')->take(3)->get();
         }
         //Reseaux sociaux
         $reseaux_sociaux = SocialNetwork::orderBy('id','desc')->first();

@@ -20,10 +20,13 @@
 										</span> --}}
 									</div>
 									<div class="single_post_text">
-										<div class="meta meta_separator1"><a href="{{route('article_par_categorie',['slug'=> $a_la_une->article_a_la_une->slug])}}">{{$a_la_une->article_a_la_une->category->nom}}</a>
-											<a href="#">{{$a_la_une->article_a_la_une->created_at->format('d M Y - H:i:s')}}</a>
+										<div class="meta meta_separator1">
+											<a href="{{route('article_par_categorie',['slug'=> $a_la_une->article_a_la_une->slug])}}">{{$a_la_une->article_a_la_une->category->nom}}</a>
+											{{--<a href="#"> {{$a_la_une->article_a_la_une->created_at->format('d-m-Y - H:i:s')}} </a>--}}
 										</div>
-										<h4><a class="play_btn" href="#">{{$a_la_une->article_a_la_une->nom}}</a></h4>
+										<h4>
+											<a class="play_btn" href="#">{{$a_la_une->article_a_la_une->nom}}</a>
+										</h4>
 										<div class="space-10"></div>
 										<p class="post-p">{!!strip_tags($a_la_une->article_a_la_une->resume)!!}</p>
 									</div>
@@ -64,7 +67,7 @@
 							</div>
 							<div class="single_post_text">
 								<div class="meta5">	<a href="{{route('article_par_categorie',['slug'=> $item->category->slug])}}">{{$item->category->nom}}</a>
-									<a href="#">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+									{{--<a href="#"> {{$item->created_at->format('d-m-Y - H:i:s')}} </a>--}}
 								</div>
 								<h4>
 									<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a>
@@ -144,7 +147,7 @@
 									<div class="single_post_text">
 										<div class="meta3">
 											<a href="{{route('article_par_categorie',['slug'=> $article1_bloc2->category->slug])}}">{{$article1_bloc2->category->nom}}</a>
-											<a href="#">{{$article1_bloc2->created_at->format('d M Y - H:i:s')}}</a>
+											{{--<a href="#"> {{$article1_bloc2->created_at->format('d-m-Y - H:i:s')}} </a>--}}
 										</div>
 										<h4><a href="{{route('details_article',['slug'=> $article1_bloc2->slug])}}">{{$article1_bloc2->nom}}</a></h4>
 										<div class="space-10"></div>
@@ -163,7 +166,7 @@
 									<div class="single_post_text">
 										<div class="meta3">
 											<a href="{{route('article_par_categorie',['slug'=> $article2_bloc2->category->slug])}}">{{$article2_bloc2->category->nom}}</a>
-											<a href="#">{{$article2_bloc2->created_at->format('d M Y - H:i:s')}}</a>
+											{{--<a href="#"> {{$article2_bloc2->created_at->format('d-m-Y - H:i:s')}} </a>--}}
 										</div>
 										<h4><a href="{{route('details_article',['slug'=> $article2_bloc2->slug])}}">{{$article2_bloc2->nom}}</a></h4>
 										<div class="space-10"></div>
@@ -196,9 +199,8 @@
 								<div class="single_post_text">
 									<div class="meta2">
 										@if ($articles_recents[4*$i+$l]->category)
-										<a href="{{route('article_par_categorie',['slug'=> $articles_recents[4*$i+$l]->category->slug])}}">{{$articles_recents[4*$i+$l]->category->nom}}</a>
+											<a href="{{route('article_par_categorie',['slug'=> $articles_recents[4*$i+$l]->category->slug])}}">{{$articles_recents[4*$i+$l]->category->nom}}</a>
 										@endif
-										<a href="{{route('details_article',['slug'=> $articles_recents[4*$i+$l]->slug])}}">@if ($articles_recents[4*$i+$l]->created_at){{$articles_recents[4*$i+$l]->created_at->format('d M Y - H:i:s')}}@endif</a>
 									</div>
 									<h4><a href="{{route('details_article',['slug'=> $articles_recents[4*$i+$l]->slug])}}">{{$articles_recents[4*$i+$l]->nom}}</a></h4>
 								</div>
@@ -243,8 +245,8 @@
 							</span> --}}
 						</div>
 						<div class="single_post_text">
-							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
-								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc1->slug])}}">{{$cat_bas_page->bas_bloc1->nom}}</a>
+								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{-- {{$item->created_at->format('d-m-Y - H:i:s')}} --}}</a>
 							</div>
 							<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>
 						</div>
@@ -274,8 +276,8 @@
 							</span> --}}
 						</div>
 						<div class="single_post_text">
-							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
-								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc2->slug])}}">{{$cat_bas_page->bas_bloc2->nom}}</a>
+								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{-- {{$item->created_at->format('d-m-Y - H:i:s')}} --}}</a>
 							</div>
 							<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>
 						</div>
@@ -305,7 +307,7 @@
 						</div>
 						<div class="single_post_text">
 							<div class="meta2">	<a href="{{route('article_par_categorie',['slug'=> $cat_bas_page->bas_bloc3->slug])}}">{{$cat_bas_page->bas_bloc3->nom}}</a>
-								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+								<a href="{{route('details_article',['slug'=> $item->slug])}}">{{-- {{$item->created_at->format('d-m-Y - H:i:s')}} --}}</a>
 							</div>
 							<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->nom}}</a></h4>
 						</div>

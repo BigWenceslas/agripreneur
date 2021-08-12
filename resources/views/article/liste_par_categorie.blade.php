@@ -84,8 +84,7 @@
 											<div class="meta2 meta_separator1">	<a href="{{route('article_par_categorie',['slug'=> $item->category->slug])}}">{{$item->category->nom}}</a>
 												<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
 											</div>
-											<h4><a href="{{route('details_article',['slug'=> $item->slug])}}">{{Str::limit($item->nom, 50, '...')}}</a></h4>
-										</div>
+											</div>
 									</div>
 									<div class="space-15"></div>
 									<div class="border_black"></div>
@@ -98,7 +97,7 @@
 						@include('partials.socials_right_bar')
 					</div>
 					<!--:::::: POST TYPE 3 START :::::::-->
-					<div class="carousel_post_type3_wrap mb30">
+					{{-- <div class="carousel_post_type3_wrap mb30">
 						<h2 class="widget-title">ESPACE PUBLICITAIRE</h2>
 						<div class="carousel_post_type3 nav_style1 owl-carousel">
 							<div class="single_post post_type3">
@@ -108,15 +107,15 @@
 									@else
 										<img src="{{asset('assets/img/bg/video4.jpg')}}" loading="lazy" alt="">
 									@endif
-									{{-- <span class="tranding">
+									<span class="tranding">
 										<i class="fas fa-bolt"></i>
-									</span> --}}
+									</span>
 								</div>
 							
 							</div>
 						
 						</div>
-					</div>
+					</div> --}}
 				
 					
 					<!--:::::: POST TYPE 4 END :::::::-->

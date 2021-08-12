@@ -58,9 +58,4 @@ class Menu2Site extends Model
     {
         return $this->belongsTo(Category::class,'categorie_9');
     }
-    
-    public function getCategorie_10()
-    {
-        return $this->belongsTo(Category::class,'categorie_10');
-    }
 }
