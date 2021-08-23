@@ -17,7 +17,7 @@
             @if ($paginator->lastPage() > 2)
                 @for ($i = 2; $i < $paginator->lastPage(); $i++)
                     <li class="page-item">
-                        <a class="page-link @if($i==$paginator->currentPage())active_pagination @endif" href="{{'http://localhost:8000/categorie/technologie?page='.$i}}">{{$i}}</a>
+                        <a class="page-link @if($i==$paginator->currentPage())active_pagination @endif" href="#">{{$i}}</a>
                     </li>
                 @endfor
             @endif

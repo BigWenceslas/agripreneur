@@ -56,7 +56,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div class="cpagination padding5050">
-								{{$articles->links('vendor.pagination.simple-default')}}
+								{{$articles->links('vendor.pagination.default')}}
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,9 @@
 										</div>
 										<div class="single_post_text">
 											<div class="meta2 meta_separator1">	<a href="@if ($item->category){{route('article_par_categorie',['slug'=> $item->category->slug])}}@endif">@if ($item->category){{$item->category->nom}}@endif</a>
-												<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+												@if ($item->created_at AND $item->created_at != '')
+													<a href="{{route('details_article',['slug'=> $item->slug])}}">{{$item->created_at->format('d M Y - H:i:s')}}</a>
+												@endif
 											</div>
 										</div>
 									</div>

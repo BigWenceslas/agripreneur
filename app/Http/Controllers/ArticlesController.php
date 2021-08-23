@@ -60,13 +60,11 @@ class ArticlesController extends Controller
     //Liste des articles
     if ($slug == 'tv') {
         $articles=ArticlesTv::orderBy('created_at','desc')->paginate(8);
-    
         return view('article.liste_par_categorie_tv')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
         'articles_populaires'=>$articles_populaires,'categorie'=>$categorie,'articles'=>$articles,'espace_publicitaire'=>$espace_publicitaire,
         'menu1' => $menu1, 'menu2' => $menu2]);
     } else {
-        $articles=Article::has('category')->orderBy('vues','desc')->where([['categorie_id','=',$categorie->id]])->paginate(8);
-            
+        $articles=Article::has('category')->orderBy('created_at','desc')->where([['categorie_id','=',$categorie->id]])->paginate(8);
         return view('article.liste_par_categorie')->with(['reseaux_sociaux'=> $reseaux_sociaux,'cat_header'=>$cat_header,
         'articles_populaires'=>$articles_populaires,'categorie'=>$categorie,'articles'=>$articles,'espace_publicitaire'=>$espace_publicitaire,
         'menu1' => $menu1, 'menu2' => $menu2]);

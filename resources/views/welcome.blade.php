@@ -328,5 +328,9 @@
 @endsection
 
 @section('js_files')
-
+<script>
+	$(document).ready(function () {
+		$('.owl-nav').hide();
+	})
+</script>
 @endsection

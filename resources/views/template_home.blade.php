@@ -52,14 +52,13 @@
 	<div class="topbar white_bg" id="top">
 		<div class="container">
 			<div class="row justify-content-between">
-	
 				<div class="col-8 col-lg-8">
 					<div class="newsprk_nav stellarnav">
 						<ul id="newsprk_menu">
 							{{-- @foreach ($cat_header as $cat)
 								<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
 							@endforeach --}}
-							@if ($menu1)
+								@if ($menu1)
 									@if ($menu1->getCategorie_1)
 									<li><a href="{{route('article_par_categorie',['slug'=>$menu1->getCategorie_1->slug])}}">{{$menu1->getCategorie_1->nom}}</i></a></li>
 									@endif
@@ -87,22 +86,22 @@
 							<li><a target="_blank" href="whatsapp://send?abid=+237656801098&text=Bonjour">Nous suivre sur Whatsapp</a></li>
                             <li class="search_btn"><i class="far fa-search"></i>
 						</ul>
-				
 					</div>
-					
 				</div>
 				<div class="col-4 col-lg-8=4 align-self-center">
 					<div class="top_date_social text-right">
 					
 						<div class="social1">
 							<ul class="inline">
-								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->twitter}}@endif"><i class="fab fa-twitter"></i></a>
+								<li>
+									<a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->twitter}}@endif"><i class="fab fa-twitter"></i></a>
 								</li>
-								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><i class="fab fa-facebook-f"></i></a>
+								<li>
+									<a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->facebook}}@endif"><i class="fab fa-facebook-f"></i></a>
 								</li>
-								<li><a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><i class="fab fa-youtube"></i></a>
+								<li>
+									<a target="_blank" href="@if($reseaux_sociaux){{$reseaux_sociaux->youtube}}@endif"><i class="fab fa-youtube"></i></a>
 								</li>
-								
 							</ul>
 						</div>
 					</div>
@@ -143,7 +142,7 @@
 				<div class="row justify-content-between">
 	
 					<div class="col-12 col-lg-12">
-						<div class="newsprk_nav stellarnav">
+						<div class="newsprk_nav light right mobile">
 							<ul id="newsprk_menu">
 								<li><a href="{{route('home')}}">Accueil</i></a></li>
 								@if ($menu2)
@@ -191,7 +190,6 @@
 								@endif
 							</ul>
 						</div>
-						
 				</div>
 			</div>
 		</div>
@@ -242,22 +240,18 @@
 								<div class="row">
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="{{route('home')}}">Acceuil</a>
-											</li>
-											@foreach ($cat_header as $cat)
-											@if ($loop->index <= count($cat_header)/2 )
-												<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
-											@endif
-											@endforeach
+											<li><a href="{{route('home')}}">Accueil</a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'emission'])}}">Emission</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'decouverte'])}}">Découverte</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'nos-marches'])}}">Nos marchés</i></a></li>
+											<li><a href="#">Galerie Photos</i></a></li>
 										</ul>
 									</div>
 									<div class="col-lg-6">
 										<ul>
-											@foreach ($cat_header as $cat)
-											@if ($loop->index > count($cat_header)/2 )
-												<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
-											@endif
-											@endforeach
+											<li><a href="{{route('article_par_categorie',['slug'=>'agenda'])}}">Agenda</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'sante'])}}">Santé</i></a></li>
+											<li><a target="_blank" href="whatsapp://send?abid=+237656801098&text=Bonjour">Nous suivre sur Whatsapp</a></li>
 										</ul>
 									</div>
 								</div>
@@ -269,22 +263,21 @@
 								<div class="row">
 									<div class="col-lg-6">
 										<ul>
-											<li><a href="{{route('home')}}">Accueil</a>
-											</li>
-											@foreach ($cat_header as $cat)
-											@if ($loop->index <= count($cat_header)/2 )
-												<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
-											@endif
-											@endforeach
+											<li><a href="{{route('home')}}">Accueil</a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'culture'])}}">Culture</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'peche'])}}">Pêche</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'elevage'])}}">Elevage</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=> 'environnement'])}}">Environnement</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'enquetes'])}}">Enquêtes</i></a></li>
 										</ul>
 									</div>
 									<div class="col-lg-6">
 										<ul>
-											@foreach ($cat_header as $cat)
-											@if ($loop->index > count($cat_header)/2 )
-												<li><a href="{{route('article_par_categorie',['slug'=>$cat->slug])}}">{{$cat->nom}}</i></a></li>
-											@endif
-											@endforeach
+											<li><a href="{{route('article_par_categorie',['slug'=>'agritech'])}}">Agritech</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'transformation'])}}">Transformation</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'agri-check'])}}">Agri Check</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=> 'technique'])}}">Technique</i></a></li>
+											<li><a href="{{route('article_par_categorie',['slug'=>'tv'])}}">TV</i></a></li>
 										</ul>
 									</div>
 								</div>
@@ -303,8 +296,6 @@
 							</li>
 							<li><a href="#">Contributeurs</a>
 							</li>
-						
-
 						</ul>
 					</div>
 				</div>
@@ -316,7 +307,6 @@
 					<div class="col-lg-6 align-self-center">
 						<p>&copy; Copyright 2021, All Rights Reserved powered by <a href="https://www.aite-consulting.com/"></a>Aiteconsulting</p>
 					</div>
-					
 				</div>
 			</div>
 		</div>
